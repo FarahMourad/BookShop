@@ -25,8 +25,12 @@
                 <li class="nav-item"><a class="nav-link" aria-current="page" href="/">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="settings">Profile</a></li>
                 <li class="nav-item"><a class="nav-link" href="stat">Statistics</a></li>
-                <li class="nav-item"><a class="nav-link" style="cursor: pointer">Logout</a></li>
+                <li class="nav-item"><a class="nav-link" style="cursor: pointer"onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">Logout</a></li>
             </ul>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+            </form>
             <form class="d-flex">
                 <button class="btn btn-outline-dark" type="button" onclick="location.href = 'cart';">
                     <i class="bi-cart-fill me-1"></i>
@@ -39,19 +43,20 @@
 </nav>
 <section class="py-5" style="background-image: url(assets/cover.jfif); height: 721px; background-position: center; background-size: cover; background-repeat: no-repeat; background-attachment: fixed">
     <div class="registration-form" style="padding: unset">
-        <form>
+        <form method="POST" action="{{route('addPublisher')}}">
+            @csrf
             <H5>Add A New Publisher</H5><br>
             <div class="form-group">
-                <label style="width: 180px">Publisher Name:</label><input type="text" class="form-control item" id="ISBN2" placeholder="Publisher Name">
+                <label style="width: 180px">Publisher Name:</label><input name="publisher_name" type="text" class="form-control item" id="ISBN2" placeholder="Publisher Name">
             </div>
             <div class="form-group">
-                <label style="width: 180px">Address:</label><input type="text" class="form-control item" id="title2" placeholder="Address">
+                <label style="width: 180px">Address:</label><input name="address" type="text" class="form-control item" id="title2" placeholder="Address">
             </div>
             <div class="form-group">
-                <label style="width: 180px">Telephone Number:</label><input type="text" class="form-control item" id="price2" placeholder="Telephone Number">
+                <label style="width: 180px">Telephone Number:</label><input name="telephone_no" type="text" class="form-control item" id="price2" placeholder="Telephone Number">
             </div>
             <div class="form-group">
-                <button type="button" style="margin-left: 20px" class="btn btn-block create-account">Add Publisher</button>
+                <button type="submit" style="margin-left: 20px" class="btn btn-block create-account">Add Publisher</button>
             </div>
         </form>
     </div>

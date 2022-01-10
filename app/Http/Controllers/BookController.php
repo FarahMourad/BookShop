@@ -99,6 +99,7 @@ class BookController
             $newAuthor->author_name = $authors_list[$i];
             $newAuthor->save();
         }
+        redirect()->back();
     }
 
     public function deleteAuthors($ISBN)
@@ -107,6 +108,7 @@ class BookController
             ['ISBN', $ISBN]
         ])->get();
         $old_authors->delete();
+        redirect()->back();
     }
 
     public function searchByISBN(Request $request)
@@ -115,7 +117,12 @@ class BookController
         $books = Book::where([
             ['ISBN', $ISBN]
         ])->get();
-        return response()->json($books);
+        $user = auth()->user();
+        if($user->is_manager == 1){
+            return view('Admin_home', ['cats' => $books]);
+        } else
+            return view('User_home', ['cats' => $books]);
+//        return response()->json($books);
     }
 
     public function searchByTitle(Request $request)
@@ -124,7 +131,12 @@ class BookController
         $books = Book::where([
             ['title', $title]
         ])->get();
-        return response()->json($books);
+        $user = auth()->user();
+        if($user->is_manager == 1){
+            return view('Admin_home', ['cats' => $books]);
+        } else
+            return view('User_home', ['cats' => $books]);
+//        return response()->json($books);
     }
 
     public function searchByPublicationYear(Request $request)
@@ -133,7 +145,12 @@ class BookController
         $books = Book::where([
             ['publication_year', $publication_year]
         ])->get();
-        return response()->json($books);
+        $user = auth()->user();
+        if($user->is_manager == 1){
+            return view('Admin_home', ['cats' => $books]);
+        } else
+            return view('User_home', ['cats' => $books]);
+//        return response()->json($books);
     }
 
     public function searchByPublisherName(Request $request)
@@ -142,7 +159,12 @@ class BookController
         $books = Book::where([
             ['publisher_name', $publisher_name]
         ])->get();
-        return response()->json($books);
+        $user = auth()->user();
+        if($user->is_manager == 1){
+            return view('Admin_home', ['cats' => $books]);
+        } else
+            return view('User_home', ['cats' => $books]);
+//        return response()->json($books);
     }
 
     public function searchBySellingPrice(Request $request)
@@ -151,7 +173,12 @@ class BookController
         $books = Book::where([
             ['selling_price', $selling_price]
         ])->get();
-        return response()->json($books);
+        $user = auth()->user();
+        if($user->is_manager == 1){
+            return view('Admin_home', ['cats' => $books]);
+        } else
+            return view('User_home', ['cats' => $books]);
+//        return response()->json($books);
     }
 
     public function searchByCategory(Request $request)
@@ -160,7 +187,12 @@ class BookController
         $books = Book::where([
             ['category', $category]
         ])->get();
-        return response()->json($books);
+        $user = auth()->user();
+        if($user->is_manager == 1){
+            return view('Admin_home', ['cats' => $books]);
+        } else
+            return view('User_home', ['cats' => $books]);
+//        return response()->json($books);
     }
 
     public function searchByQuantity(Request $request)
@@ -169,7 +201,12 @@ class BookController
         $books = Book::where([
             ['quantity', $quantity]
         ])->get();
-        return response()->json($books);
+        $user = auth()->user();
+        if($user->is_manager == 1){
+            return view('Admin_home', ['cats' => $books]);
+        } else
+            return view('User_home', ['cats' => $books]);
+//        return response()->json($books);
     }
 
     public function searchByThreshold(Request $request)
@@ -178,6 +215,11 @@ class BookController
         $books = Book::where([
             ['threshold', $threshold]
         ])->get();
-        return response()->json($books);
+        $user = auth()->user();
+        if($user->is_manager == 1){
+            return view('Admin_home', ['cats' => $books]);
+        } else
+            return view('User_home', ['cats' => $books]);
+//        return response()->json($books);
     }
 }

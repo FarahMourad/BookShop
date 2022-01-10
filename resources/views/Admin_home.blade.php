@@ -70,7 +70,7 @@
 
         </div>
         <div style=" float:right; width: 80%">
-            <div  class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                 <div class="col mb-5">
                     <div  class="card h-100">
                         <!-- Product image-->
@@ -98,7 +98,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
             <div class="form-group" style="margin-bottom: 20px; align-content: center; padding-left: 350px; position: fixed; bottom: 0">
                 <input type="button" style="background-color: #1a1e21; color: white" class="btn btn-block create-account" value="<Previous">
@@ -129,15 +128,15 @@
 <div id="light" class="white_content">
     <div class="registration-form">
         <form>
-            <button class="btn btn-primary" style="width: 160px" onclick="location.href = 'promote';">Promote user</button>
+            <button class="btn btn-primary" style="width: 160px; margin-bottom: 10px" onclick="location.href = 'promote';">Promote user</button>
             <br>
-            <button class="btn btn-primary" style="width: 160px" onclick="location.href = 'addB';">+ Add new book</button>
+            <button class="btn btn-primary" style="width: 160px; margin-bottom: 10px" onclick="location.href = 'addB';">+ Add new book</button>
             <br>
-            <button class="btn btn-primary" style="width: 160px" onclick="location.href = 'editB';">Edit book</button>
+            <button class="btn btn-primary" style="width: 160px; margin-bottom: 10px" onclick="location.href = 'editB';">Edit book</button>
             <br>
-            <button class="btn btn-primary" style="width: 160px" onclick="location.href = 'con';">Confirm Orders</button>
+            <button class="btn btn-primary" style="width: 160px; margin-bottom: 10px" onclick="location.href = 'con';">Confirm Orders</button>
             <br>
-            <button class="btn btn-primary" style="width: 160px" onclick="location.href = 'addP';">+ Add Publishers</button>
+            <button class="btn btn-primary" style="width: 160px; margin-bottom: 10px" onclick="location.href = 'addP';">+ Add Publishers</button>
         </form>
     </div>
 </div>

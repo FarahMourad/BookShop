@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Cart</title>
+    <title>Confirm Orders</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <!-- Bootstrap icons-->
@@ -14,8 +14,6 @@
     <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
-<div id="light" class="white_content"></div>
-<div id="fade" class="black_overlay"></div>
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container px-4 px-lg-5">
@@ -25,7 +23,9 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                 <li class="nav-item"><a class="nav-link" aria-current="page" href="/">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="settings">Profile</a></li>
-                <li class="nav-item"><a class="nav-link" style="cursor: pointer">Logout</a></li>
+                <li class="nav-item"><a class="nav-link" href="stat">Statistics</a></li>
+                <li class="nav-item"><a class="nav-link" style="cursor: pointer" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">Logout</a></li>
             </ul>
             <form class="d-flex">
                 <button class="btn btn-outline-dark" type="button">
@@ -46,29 +46,24 @@
             <div class="table-responsive">
                 <table class="table activitites">
                     <thead>
-                    <tr>
-                        <th scope="col" class="text-uppercase header">item</th>
-                        <th scope="col" class="text-uppercase">Quantity</th>
-                        <th scope="col" class="text-uppercase">price each</th>
-                        <th scope="col" class="text-uppercase">total</th>
-                    </tr>
+                        <tr>
+                            <th scope="col" class="text-uppercase header">ISBN</th>
+                            <th scope="col" class="text-uppercase">Quantity</th>
+                            <th scope="col" class="text-uppercase">Publisher Name</th>
+                        </tr>
                     </thead>
                     <tbody id="orderTable">
-                    <tr>
-                        <td>
-                            Inverting The Pyramid
-                        </td>
-                        <td>120</td>
-                        <td>$21.40 </td>
-                        <td> $249 </td>
-                        <td>
-                            <button onclick="orders()" type="button" class="btn btn-danger">× Remove Item</button>
-                        </td>
-                    </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <button onclick="orders()" type="button" class="btn btn-success">Confirm Order</button>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
-                <button style="margin-left: 500px" class="btn btn-danger">Clear Cart</button>
-                <button style="margin-left: 100px" class="btn btn-success">Checkout</button>
+                <button style="margin-left: 600px" class="btn btn-success">Confirm All Orders</button>
             </div>
         </div>
     </div>

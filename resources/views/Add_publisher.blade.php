@@ -37,39 +37,21 @@
         </div>
     </div>
 </nav>
-<section class="py-5" style="background-image: url(assets/cover.jfif); background-position: center; background-size: cover; background-repeat: no-repeat; background-attachment: fixed">
+<section class="py-5" style="background-image: url(assets/cover.jfif); height: 721px; background-position: center; background-size: cover; background-repeat: no-repeat; background-attachment: fixed">
     <div class="registration-form" style="padding: unset">
         <form>
-            <H5>Add A New Book</H5>
+            <H5>Add A New Publisher</H5><br>
             <div class="form-group">
-                <label style="width: 120px">ISBN:</label><input type="text" class="form-control item" id="ISBN2" placeholder="Book ISBN">
+                <label style="width: 180px">Publisher Name:</label><input type="text" class="form-control item" id="ISBN2" placeholder="Publisher Name">
             </div>
             <div class="form-group">
-                <label style="width: 120px">Title:</label><input type="text" class="form-control item" id="title2" placeholder="Title">
+                <label style="width: 180px">Address:</label><input type="text" class="form-control item" id="title2" placeholder="Address">
             </div>
             <div class="form-group">
-                <label style="width: 120px">Price:</label><input type="text" class="form-control item" id="price2" placeholder="Price">
+                <label style="width: 180px">Telephone Number:</label><input type="text" class="form-control item" id="price2" placeholder="Telephone Number">
             </div>
             <div class="form-group">
-                <label style="width: 120px">Publisher:</label><input type="text" class="form-control item" id="publisher2" placeholder="Publisher">
-            </div>
-            <div class="form-group">
-                <label style="width: 120px">Publication Year:</label><input type="text" class="form-control item" id="year2" placeholder="Publication Year">
-            </div>
-            <div class="form-group">
-                <label style="width: 120px">Threshold:</label><input type="text" class="form-control item" id="threshold2" placeholder="Threshold">
-            </div>
-            <div class="form-group">
-                <label style="width: 120px">Quantity:</label><input type="text" class="form-control item" id="copies2" placeholder="Available Copies">
-            </div>
-            <div class="form-group">
-                <label style="width: 120px">Category:</label><input type="text" class="form-control item" id="category2" placeholder="Book Category">
-            </div>
-            <div class="form-group">
-                <label style="width: 120px">Author(s):</label><input type="text" class="form-control item" id="author2" placeholder="Author1,Author2,Author3...">
-            </div>
-            <div class="form-group">
-                <button type="button" style="margin-left: 20px" class="btn btn-block create-account">Add Book</button>
+                <button type="button" style="margin-left: 20px" class="btn btn-block create-account">Add Publisher</button>
             </div>
         </form>
     </div>

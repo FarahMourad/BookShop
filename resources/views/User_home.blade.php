@@ -68,7 +68,7 @@
         <div style=" float:right; width: 80%">
                 @if($cats !== "" )
                     @foreach( $cats as $cat )
-                    <div  class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+
                             <div class="col mb-5">
         {{--                        @foreach($cats as $cat)--}}
                                     <div  class="card h-100">
@@ -90,7 +90,7 @@
                                 </div>
         {{--                        @endfor--}}
                          </div>
-                    </div>
+                    
                     @endforeach
             @endif
             <div class="form-group" style="margin-bottom: 20px; align-content: center; padding-left: 350px; position: fixed; bottom: 0">

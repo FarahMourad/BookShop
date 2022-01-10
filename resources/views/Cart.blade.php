@@ -15,8 +15,6 @@
 
 </head>
 <body>
-<div id="light" class="white_content"></div>
-<div id="fade" class="black_overlay"></div>
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container px-4 px-lg-5">

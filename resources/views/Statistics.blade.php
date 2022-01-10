@@ -15,9 +15,184 @@
 </head>
 
 <body>
+<div id="light" class="white_content" style="width: 60%; height: 80%; margin: unset; left: 20%; top: 10%">
+    <div class="registration-form" style="background-color: white; width: 100%; height: 100%; padding-top: 10px">
+        <div id="table3">
+            <p id="t3">Top 10 Books</p><br>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col" class="text-uppercase"></th>
+                    <th scope="col" class="text-uppercase"></th>
+                    <th scope="col" class="text-uppercase"></th>
+                    <th scope="col" class="text-uppercase"></th>
+                    <th scope="col" class="text-uppercase"></th>
+                    <th scope="col" class="text-uppercase"></th>
+                    <th scope="col" class="text-uppercase"></th>
+                    <th scope="col" class="text-uppercase"></th>
+                </tr>
+                </thead>
+                <tbody id="orderTable">
+                <tr>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                </tr>
+                <tr>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                </tr>
+                <tr>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                </tr>
+                <tr>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                </tr>
+                <tr>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                </tr>
+                <tr>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                </tr>
+                <tr>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                </tr>
+                <tr>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                </tr>
+                <tr>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                </tr>
+                <tr>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="table2">
+            <p id="t2">Top 5 Customers</p><br>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col" class="text-uppercase"></th>
+                    <th scope="col" class="text-uppercase"></th>
+                    <th scope="col" class="text-uppercase"></th>
+                    <th scope="col" class="text-uppercase"></th>
+                    <th scope="col" class="text-uppercase"></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                </tr>
+                <tr>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                </tr>
+                <tr>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                </tr>
+                <tr>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                </tr>
+                <tr>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                    <td>a</td>
+                </tr>
 
-<div id="light" class="white_content">
-
+                </tbody>
+            </table>
+        </div>
+        <div id="table1">
+            <br>
+            <p id="profit"></p>
+        </div>
+    </div>
 </div>
 <div id="fade" class="black_overlay"></div>
 <!-- Navigation-->
@@ -54,20 +229,20 @@
                 <label style="width: 400px; margin-bottom: 5px">
                     The total sales for books in the previous month
                 </label>
-                <input type="button" class="form-control item" value="Show" style="background-color: #1a1e21; color: white" onclick="location.href = '';" id="report1">
+                <input type="button" class="form-control item" value="Show" style="background-color: #1a1e21; color: white" id="report1">
             </div>
             <div class="form-group">
                 <label style="width: 400px; margin-bottom: 5px">
                     The top 5 customers who purchase the most purchase amount in descending order for the last
                     three months
                 </label>
-                <input type="button" class="form-control item" value="Show" style="background-color: #1a1e21; color: white" onclick="location.href = '';" id="report2">
+                <input type="button" class="form-control item" value="Show" style="background-color: #1a1e21; color: white" id="report2">
             </div>
             <div class="form-group">
                 <label style="width: 400px; margin-bottom: 5px">
                     The top 10 selling books for the last three months
                 </label>
-                <input type="button" class="form-control item" value="Show" style="background-color: #1a1e21; color: white" onclick="location.href = '';" id="report3">
+                <input type="button" class="form-control item" value="Show" style="background-color: #1a1e21; color: white" id="report3">
             </div>
         </form>
     </div>
@@ -85,6 +260,7 @@
         document.getElementById('table1').style.display = "block";
         document.getElementById('table2').style.display = "none";
         document.getElementById('table3').style.display = "none";
+        document.getElementById('table1').innerText = "Total Profit Last Month";
     })
     $('#report2').on("click", function () {
         document.getElementById('light').style.display = "block";

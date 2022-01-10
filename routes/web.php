@@ -23,8 +23,10 @@ Route::group(['middleware' => 'prevent'],function() {
             return view('Admin_home');
         });
         Route::get('/home', function () {
-            return view('User_home');
+            return view('User_home', ['cats' => ""]);
         });
+        Route::get('/home', 'CategoryController@getAll');
+
         Route::get('/promote', function () {
             return view('Promote');
         });
@@ -34,7 +36,7 @@ Route::group(['middleware' => 'prevent'],function() {
         Route::get('/getGeo', 'CategoryController@getGeo')->name('getGeo');
         Route::get('/getRel', 'CategoryController@getRel')->name('getRel');
         Route::get('/getScience', 'CategoryController@getScience')->name('getScience');
-        Route::get('/getHist', 'CategoryController@getHist')->name('getHist');
+        Route::get('/getHist', 'CategoryController@getHistory')->name('getHist');
 
 
         Route::get('/settings', 'EditUserInfoController@showSetting');

@@ -15,7 +15,7 @@
 </head>
 <body>
 <!-- Navigation-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: fixed; right: 0; left: 0">
     <div class="container px-4 px-lg-5">
         <a class="navbar-brand" href="/">Book Store</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -35,7 +35,7 @@
     </div>
 </nav>
 <!-- Section-->
-<section class="py-5" style="background: url(assets/cover.jfif) no-repeat center center; background-size: cover; height: 665px">
+<section class="py-5" style="background-image: url(assets/cover.jfif); background-position: center; background-size: cover; background-repeat: no-repeat; background-attachment: fixed">
     <div class="registration-form" style="padding: unset">
         <form style="margin-top: unset; padding: 30px 50px">
             <div class="form-group">

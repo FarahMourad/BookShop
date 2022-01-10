@@ -47,13 +47,15 @@
                 <table class="table activitites">
                     <thead>
                         <tr>
-                            <th scope="col" class="text-uppercase header">ISBN</th>
+                            <th scope="col" class="text-uppercase header"></th>
+                            <th scope="col" class="text-uppercase">ISBN</th>
                             <th scope="col" class="text-uppercase">Quantity</th>
                             <th scope="col" class="text-uppercase">Publisher Name</th>
                         </tr>
                     </thead>
                     <tbody id="orderTable">
                         <tr>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>

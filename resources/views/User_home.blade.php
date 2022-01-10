@@ -46,7 +46,7 @@
     <div class="container px-4 px-lg-5 mt-5">
         <div style="display:inline-block; width: 15%; border-right: 1px solid #8a6e5a; height: 500px">
             <div>
-                <button class="btn btn-primary" >Search</button>
+                <button class="btn btn-primary" id="search">Search</button>
             </div>
             <ul class="nav flex-column">
                 <li class="nav-item">
@@ -97,83 +97,42 @@
         </div>
     </div>
 </section>
-<!--<section style="display:none" id="addingBook" class="py-5">-->
-<!--    <div class="registration-form">-->
-<!--        <form>-->
-<!--            <div class="form-group">-->
-<!--                <input type="text" class="form-control item" id="ISBN" placeholder="Book ISBN">-->
-<!--            </div>-->
-<!--            <div class="form-group">-->
-<!--                <input type="text" class="form-control item" id="title" placeholder="Title">-->
-<!--            </div>-->
-<!--            <div class="form-group">-->
-<!--                <input type="text" class="form-control item" id="price" placeholder="Price">-->
-<!--            </div>-->
-<!--            <div class="form-group">-->
-<!--                <input type="text" class="form-control item" id="publisher" placeholder="Publisher">-->
-<!--            </div>-->
-<!--            <div class="form-group">-->
-<!--                <input type="text" class="form-control item" id="year" placeholder="Publication Year">-->
-<!--            </div>-->
-<!--            <div class="form-group">-->
-<!--                <input type="text" class="form-control item" id="threshold" placeholder="Threshold">-->
-<!--            </div>-->
-<!--            <div class="form-group">-->
-<!--                <input type="text" class="form-control item" id="copies" placeholder="Copies Available">-->
-<!--            </div>-->
-<!--            <div class="form-group">-->
-<!--                <input type="text" class="form-control item" id="category" placeholder="Book Category">-->
-<!--            </div>-->
-<!--            <div class="form-group">-->
-<!--                <input type="text" class="form-control item" id="author" placeholder="Author 1">-->
-<!--            </div>-->
-<!--            <div class="form-group">-->
-<!--                <button type="button" style="margin-left: 140px" class="btn btn-block create-account">Add Book</button>-->
-<!--            </div>-->
-<!--        </form>-->
-<!--    </div>-->
-<!--</section>-->
-<!--<section style="display:none" id="editBook" class="py-5">-->
-<!--    <div class="registration-form">-->
-<!--        <form>-->
-<!--            <div class="form-group">-->
-<!--                <input type="text" class="form-control item" id="ISBN2" placeholder="Book ISBN">-->
-<!--            </div>-->
-<!--            <div class="form-group">-->
-<!--                <input type="text" class="form-control item" id="title2" placeholder="Title">-->
-<!--            </div>-->
-<!--            <div class="form-group">-->
-<!--                <input type="text" class="form-control item" id="price2" placeholder="Price">-->
-<!--            </div>-->
-<!--            <div class="form-group">-->
-<!--                <input type="text" class="form-control item" id="publisher2" placeholder="Publisher">-->
-<!--            </div>-->
-<!--            <div class="form-group">-->
-<!--                <input type="text" class="form-control item" id="year2" placeholder="Publication Year">-->
-<!--            </div>-->
-<!--            <div class="form-group">-->
-<!--                <input type="text" class="form-control item" id="threshold2" placeholder="Threshold">-->
-<!--            </div>-->
-<!--            <div class="form-group">-->
-<!--                <input type="text" class="form-control item" id="copies2" placeholder="Copies Available">-->
-<!--            </div>-->
-<!--            <div class="form-group">-->
-<!--                <input type="text" class="form-control item" id="category2" placeholder="Book Category">-->
-<!--            </div>-->
-<!--            <div class="form-group">-->
-<!--                <input type="text" class="form-control item" id="author2" placeholder="Author 1">-->
-<!--            </div>-->
-<!--            <div class="form-group">-->
-<!--                <button type="button" style="margin-left: 140px" class="btn btn-block create-account">Edit Book</button>-->
-<!--            </div>-->
-<!--        </form>-->
-<!--    </div>-->
-<!--</section>-->
 
-<!-- Bootstrap core JS-->
+<div id="lightS" class="white_content">
+    <div class="registration-form">
+        <form>
+            <div class="form-group">
+                <input type="text" name="e-mail" class="form-control item" id="username" placeholder="Key Word">
+                <div>
+                    <input style="float: left" name="searchSelect" type="radio" id="title"> <label style="float: left; margin-left: 10px" for="title">Title</label><br>
+                    <input style="float: left" name="searchSelect" type="radio" id="isbn"> <label style="float: left; margin-left: 10px" for="isbn">ISBN</label><br>
+                    <input style="float: left" name="searchSelect" type="radio" id="publisher"> <label style="float: left; margin-left: 10px" for="publisher">Publisher</label><br>
+                    <input style="float: left" name="searchSelect" type="radio" id="pYear"> <label style="float: left; margin-left: 10px" for="pYear">Publication Year</label><br>
+                    <input style="float: left" name="searchSelect" type="radio" id="author"> <label style="float: left; margin-left: 10px" for="author">Author</label><br>
+                </div>
+            </div>
+            <div class="form-group">
+                <button style="margin-left: 180px" class="btn btn-block create-account">Search</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="fadeS" class="black_overlay"></div>
+
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Core theme JS-->
-<script src="js/scripts.js"></script>
-<script src="js/router.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $('#search').on("click", function () {
+        document.getElementById('lightS').style.display = "block";
+        document.getElementById('fadeS').style.display = "block";
+    })
+    $('#fadeS').on("click", function () {
+        document.getElementById('lightS').style.display = "none";
+        document.getElementById('fadeS').style.display = "none";
+    })
+</script>
 </body>
 </html>

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-class EditUserInfo
+class ManagerController
 {
 
 }

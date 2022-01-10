@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Redirect;
 class EditUserInfoController
 {
     public function showSetting(){
-        return view('setting');
+        return view('Settings');
     }
     public function edit(Request $request): RedirectResponse
     {

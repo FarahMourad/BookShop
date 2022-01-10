@@ -8,13 +8,13 @@ class Book
     protected $table = 'book';
     public $timestamps = false;
     protected $fillable = [
-        'category',
         'ISBN',
+        'title',
         'publication_year',
         'publisher_name',
-        'quantity',
         'selling_price',
-        'threshold',
-        'title'
+        'category',
+        'quantity',
+        'threshold'
     ];
 }

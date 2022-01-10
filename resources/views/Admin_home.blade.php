@@ -25,7 +25,7 @@
                 <li class="nav-item"><a class="nav-link" aria-current="page" href="/">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="settings">Profile</a></li>
                 <li class="nav-item"><a class="nav-link" href="statistics">Statistics</a></li>
-                <li class="nav-item"><a class="nav-link" href="/">Logout</a></li>
+                <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
             </ul>
             <form class="d-flex">
                 <button class="btn btn-outline-dark" type="submit">

@@ -76,6 +76,7 @@ class RegisterController extends Controller
             'shipping_address' => $data['shipping_address'],
             'e-mail' => $data['e-mail'],
             'password' => Hash::make($data['password']),
+            'is_manager' => true
         ]);
     }
 }

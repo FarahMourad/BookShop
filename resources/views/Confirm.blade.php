@@ -38,8 +38,6 @@
     </div>
 </nav>
 <section>
-
-    3
     <div class="wrapper">
         <div id="table" class="bg-white rounded">
             <div class="d-md-flex align-items-md-center px-3 pt-3">
@@ -74,7 +72,6 @@
                     @endif
                     </tbody>
                 </table>
-                <button style="margin-left: 600px" class="btn btn-success">Confirm All Orders</button>
             </div>
         </div>
     </div>

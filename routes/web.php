@@ -19,13 +19,21 @@ Route::get('/', function () {
 Route::group(['middleware' => 'prevent'],function() {
     Auth::routes();
     Route::group(['middleware' => 'auth'], function () {
-        Route::get('/adminHome', function () {
-            return view('Admin_home');
-        });
-        Route::get('/home', function () {
-            return view('User_home', ['cats' => ""]);
-        });
+//        Route::get('/adminHome', function () {
+//            return view('Admin_home', ['cats' => ""]);
+//        });
+//        Route::get('/home', function () {
+//            return view('User_home', ['cats' => ""]);
+//        });
         Route::get('/home', 'CategoryController@getAll');
+        Route::get('/adminHome', 'CategoryController@getAllAdimin');
+
+        Route::get('/getArtAdmin', 'CategoryController@getArtAdmin')->name('getArtAdmin');
+        Route::get('/getGeoAdmin', 'CategoryController@getGeoAdmin')->name('getGeoAdmin');
+        Route::get('/getRelAdmin', 'CategoryController@getRelAdmin')->name('getRelAdmin');
+        Route::get('/getScienceAdmin', 'CategoryController@getScienceAdmin')->name('getScienceAdmin');
+        Route::get('/getHistAdmin', 'CategoryController@getHistoryAdmin')->name('getHistAdmin');
+
 
         Route::get('/promote', function () {
             return view('Promote');

@@ -190,6 +190,7 @@
         </div>
         <div id="table1">
             <br>
+
             <p id="profit"></p>
         </div>
     </div>
@@ -223,13 +224,14 @@
 </nav>
 <section class="py-5" style="background-image: url(assets/cover.jfif); height: 720px; background-size: cover; background-repeat: no-repeat; background-attachment: fixed">
     <div class="registration-form" style="padding: unset">
-        <form>
+        <form method="POST" action="{{route('getStat')}}">
+            @csrf
             <H5 style="font-family: 'Lucida Bright'">Statistics</H5><br>
             <div class="form-group">
                 <label style="width: 400px; margin-bottom: 5px">
                     The total sales for books in the previous month
                 </label>
-                <input type="button" class="form-control item" value="Show" style="background-color: #1a1e21; color: white" id="report1">
+                <input type="submit" class="form-control item" value="Show" style="background-color: #1a1e21; color: white" id="report1">
             </div>
             <div class="form-group">
                 <label style="width: 400px; margin-bottom: 5px">

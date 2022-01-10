@@ -15,40 +15,36 @@
 </head>
 <body>
 <!-- Navigation-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: fixed; right: 0; left: 0">
     <div class="container px-4 px-lg-5">
-        <a class="navbar-brand" href="home">Book Me</a>
+        <a class="navbar-brand" href="home">Book Store</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                 <li class="nav-item"><a class="nav-link" href="home">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="login">Login</a></li>
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="register">Signup</a></li>
-                <li style="display: none" class="nav-item"><a class="nav-link" href="settings">Profile</a></li>
-                <li style="display: none" class="nav-item"><a class="nav-link" href="statistics">Statistics</a></li>
-                <li style="display: none" class="nav-item"><a class="nav-link" href="logout">Logout</a></li>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" style="cursor: pointer">Signup</a></li>
             </ul>
         </div>
     </div>
 </nav>
 <!-- Section-->
-<section class="py-5">
-    <div class="registration-form">
-
+<section class="py-5" style="background-image: url(assets/cover.jfif); background-position: center; background-size: cover; background-repeat: no-repeat; background-attachment: fixed">
+    <div class="registration-form" style="padding: unset">
         <form method="POST" action="{{ route('register') }}">
+            <H5 style="font-family: 'Lucida Bright'">Create New Account</H5><br>
             @csrf
             <div class="form-group">
-                <input type="text" name="first_name" class="form-control item" id="firstname" placeholder="First Name">
+                <label style="width: 180px">First Name:</label><input type="text" name="first_name" class="form-control item" id="firstname" placeholder="First Name">
             </div>
             <div class="form-group">
-                <input type="text" name="last_name" class="form-control item" id="lastname" placeholder="Last Name">
+                <label style="width: 180px">Last Name:</label><input type="text" name="last_name" class="form-control item" id="lastname" placeholder="Last Name">
             </div>
             <div class="form-group">
-                <input type="text" name="user_name" class="form-control item" id="username" placeholder="Username">
+                <label style="width: 180px">Username:</label><input type="text" name="user_name" class="form-control item" id="username" placeholder="Username">
             </div>
             <div class="form-group">
-                <input type="email" name="e-mail" class="form-control item" id="email" placeholder="Email">
-
+                <label style="width: 180px">E-mail:</label><input type="email" name="e-mail" class="form-control item" id="email" placeholder="Email">
                 @error('e-mail')--}}
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
@@ -56,16 +52,16 @@
                 @enderror
             </div>
             <div class="form-group">
-                <input type="password" name="password" required autocomplete="new-password" class="form-control item" id="password" placeholder="Password">
+                <label style="width: 180px">Password:</label><input type="password" name="password" required autocomplete="new-password" class="form-control item" id="password" placeholder="Password">
             </div>
             <div class="form-group">
-                <input type="password" name="password_confirmation" required autocomplete="new-password" class="form-control item" placeholder="Password">
+                <label style="width: 180px">Confirmation Password:</label><input type="password" name="password_confirmation" required autocomplete="new-password" class="form-control item" placeholder="Password">
             </div>
             <div class="form-group">
-                <input type="text" name="phone_number" class="form-control item" id="phone-number" placeholder="Phone Number">
+                <label style="width: 180px">Phone Number:</label><input type="text" name="phone_number" class="form-control item" id="phone-number" placeholder="Phone Number">
             </div>
             <div class="form-group">
-                <input type="text" name="shipping_address" class="form-control item" id="address" placeholder="Shipping Address">
+                <label style="width: 180px">Shipping Address:</label><input type="text" name="shipping_address" class="form-control item" id="address" placeholder="Shipping Address">
             </div>
             <div class="form-group">
                 <button type="submit" style="margin-left: 140px" class="btn btn-block create-account">Create Account</button>

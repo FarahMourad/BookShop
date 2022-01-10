@@ -42,7 +42,7 @@
         <form>
             <H5>Edit Book</H5>
             <div class="form-group">
-                <label style="width: 120px">ISBN:</label><input type="text" class="form-control item" id="ISBN2" placeholder="Book ISBN">
+                <label style="width: 120px">ISBN:</label><input type="text" class="form-control item" id="ISBN2" placeholder="Book ISBN to be edited">
             </div>
             <div class="form-group">
                 <label style="width: 120px">Title:</label><input type="text" class="form-control item" id="title2" placeholder="Title">

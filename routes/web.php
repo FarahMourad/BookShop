@@ -80,7 +80,7 @@ Route::group(['middleware' => 'prevent'],function() {
 
         Route::get('/con', 'BookOrderController@confirmOrderPage')->name('confirmOrderPage');
 
-        Route::post('/addPublisher', 'BookOrderController@addPublisher')->name('addPublisher');
+        Route::post('/addPublisher', 'PublisherController@addPublisher')->name('addPublisher');
 
     });
 

@@ -126,15 +126,15 @@
 <div id="light" class="white_content">
     <div class="registration-form">
         <form>
-            <button class="btn btn-primary" style="width: 160px; margin-bottom: 10px" onclick="location.href = 'promote';">Promote user</button>
+            <a class="btn btn-primary" style="width: 160px; margin-bottom: 10px" href="/promote">Promote user</a>
             <br>
-            <button class="btn btn-primary" style="width: 160px; margin-bottom: 10px" onclick="location.href = 'addB';">+ Add new book</button>
+            <a class="btn btn-primary" style="width: 160px; margin-bottom: 10px" href ="/addB">+ Add new book</a>
             <br>
-            <button class="btn btn-primary" style="width: 160px; margin-bottom: 10px" onclick="location.href = 'editB';">Edit book</button>
+            <a class="btn btn-primary" style="width: 160px; margin-bottom: 10px" href="/editB">Edit book</a>
             <br>
-            <button class="btn btn-primary" style="width: 160px; margin-bottom: 10px" onclick="location.href = 'con';">Confirm Orders</button>
+            <a class="btn btn-primary" style="width: 160px; margin-bottom: 10px" href="/con">Confirm Orders</a>
             <br>
-            <button class="btn btn-primary" style="width: 160px; margin-bottom: 10px" onclick="location.href = 'addP';">+ Add Publishers</button>
+            <a class="btn btn-primary" style="width: 160px; margin-bottom: 10px" href="/addP">+ Add Publishers</a>
         </form>
     </div>
 </div>

@@ -27,7 +27,6 @@ class BookController
         if ($publisher == null) {
             return;
         }
-
         $ISBN = $request->ISBN;
         $title = $request->title;
         $publication_year = $request->publication_year;
@@ -51,6 +50,7 @@ class BookController
             $this->addAuthors($authors, $ISBN);
             $book->save();
         }
+        redirect()->back();
     }
 
     public function editBook(Request $request)

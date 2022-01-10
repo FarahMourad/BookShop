@@ -55,6 +55,10 @@ Route::group(['middleware' => 'prevent'],function() {
         Route::get('/addB', function () {
             return view('Add_book');
         });
+
+        Route::post('/addBook', 'BookController@addBook')->name('addBook');
+
+
         Route::get('/stat', function () {
             return view('Statistics');
         });

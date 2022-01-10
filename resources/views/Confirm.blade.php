@@ -38,6 +38,8 @@
     </div>
 </nav>
 <section>
+
+    3
     <div class="wrapper">
         <div id="table" class="bg-white rounded">
             <div class="d-md-flex align-items-md-center px-3 pt-3">
@@ -54,15 +56,22 @@
                         </tr>
                     </thead>
                     <tbody id="orderTable">
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>
-                                <button onclick="orders()" type="button" class="btn btn-success">Confirm Order</button>
-                            </td>
-                        </tr>
+                    @if($cats !== "" )
+                        @foreach( $cats as $cat )
+                            <form method="POST" action="{{route('deleteOrder')}}" style="display: none" id="{{$cat->order_id}}">
+                            <input name="order_id" type="text" value="{{$cat->order_id}}">
+                            <tr>
+                                <td>{{$cat->order_id}}</td>
+                                <td>{{$cat->ISBN}}</td>
+                                <td>{{$cat->quantity}}</td>
+                                <td> {{$cat->publisher_name}}</td>
+                                <td>
+                                    <button type="submit" class="btn btn-success">Confirm Order</button>
+                                </td>
+                            </tr>
+                            </form>
+                        @endforeach
+                    @endif
                     </tbody>
                 </table>
                 <button style="margin-left: 600px" class="btn btn-success">Confirm All Orders</button>

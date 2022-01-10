@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Book;
 use App\Models\Book_order;
 use Illuminate\Http\Request;
 use \Illuminate\Http\JsonResponse;
@@ -22,9 +23,16 @@ class BookOrderController
         $order->save();
     }
 
-    public function confirmOrder()
+    public function confirmOrder(Request $request)
     {
-        
+        $order = Book_order::where('order_id', $request->order_id)->first();
+        $order->delete();
+        $this->confirmOrderPage();
+    }
+    public function confirmOrderPage()
+    {
+        $cat = Book_order::all();
+        return view('Confirm', ['cats' => $cat]);
     }
 
 }

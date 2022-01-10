@@ -77,6 +77,12 @@ Route::group(['middleware' => 'prevent'],function() {
             return view('Statistics');
         });
     });
+
+    Route::post('/deleteOrder', 'BookOrderController@confirmOrder')->name('deleteOrder');
+
+    Route::post('/con', 'BookOrderController@confirmOrderPage')->name('confirmOrderPage');
+
+
 });
 
 

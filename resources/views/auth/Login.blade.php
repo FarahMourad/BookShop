@@ -23,7 +23,7 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                 <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
                 <li class="nav-item"><a class="nav-link active" aria-current="page" style="cursor: pointer">Login</a></li>
-                <li class="nav-item"><a class="nav-link" href="signup">Signup</a></li>
+                <li class="nav-item"><a class="nav-link" href="/register">Signup</a></li>
             </ul>
         </div>
     </div>
@@ -31,15 +31,16 @@
 <!-- Section-->
 <section class="py-5" style="background: url(assets/cover.jfif) no-repeat center center; background-size: cover; height: 665px">
                 <div class="registration-form">
-                    <form>
+                    <form method="POST" action="{{ route('login') }}">
+                        @csrf
                         <div class="form-group">
-                            <input type="text" class="form-control item" id="username" placeholder="E-Mail">
+                            <input type="text" name="e-mail" class="form-control item" id="username" placeholder="E-Mail">
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control item" id="password" placeholder="Password">
+                            <input type="password" name="password" class="form-control item" id="password" placeholder="Password">
                         </div>
                         <div class="form-group">
-                            <button type="button" style="margin-left: 180px" class="btn btn-block create-account">Sign in</button>
+                            <button type="submit" style="margin-left: 180px" class="btn btn-block create-account">Sign in</button>
                         </div>
                     </form>
                 </div>

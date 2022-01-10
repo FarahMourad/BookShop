@@ -39,7 +39,7 @@
 </header>
 <div class="row gx-4 gx-lg-5">
     <div class="col-lg-3 col-md-6 text-center"></div>
-    <div onclick="location.href = 'signup';" class="col-lg-3 col-md-6 text-center">
+    <div onclick="location.href = 'register';" class="col-lg-3 col-md-6 text-center">
         <div style="cursor: pointer" class="mt-5">
             <div class="mb-2"><i class="bi bi-person-plus fs-1" style="color: #c6734d"></i></div>
             <h3 class="h4 mb-2">Create an Account</h3>

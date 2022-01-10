@@ -30,6 +30,13 @@ Route::group(['middleware' => 'prevent'],function() {
         });
         Route::post('/promoteUser', 'ManagerController@promote_user')->name('promoteUser');
 
+        Route::get('/getArt', 'CategoryController@getArt')->name('getArt');
+        Route::get('/getGeo', 'CategoryController@getGeo')->name('getGeo');
+        Route::get('/getRel', 'CategoryController@getRel')->name('getRel');
+        Route::get('/getScience', 'CategoryController@getScience')->name('getScience');
+        Route::get('/getHist', 'CategoryController@getHist')->name('getHist');
+
+
         Route::get('/settings', 'EditUserInfoController@showSetting');
 
         Route::post('/editData', 'EditUserInfoController@edit')->name('edit');

@@ -48,46 +48,53 @@
             </div>
             <ul class="nav flex-column">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Art</a>
+                    <a class="nav-link active" href="/getArt">Art</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Geography</a>
+                    <a class="nav-link" href="/getGeo">Geography</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">History</a>
+                    <a class="nav-link" href="/getHist">History</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Religion</a>
+                    <a class="nav-link" href="/getRel">Religion</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Science</a>
+                    <a class="nav-link" href="/getScience">Science</a>
                 </li>
             </ul>
 
         </div>
         <div style=" float:right; width: 80%">
-            <div  class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                <div class="col mb-5">
-                    <div  class="card h-100">
-                        <img class="card-img-top" src="assets/cover2.jpeg" alt="..." />
-                        <div class="card-body">
-                            <div class="text-center">
-                                <h5 class="fw-bolder">Book Title</h5>
-                                <a>$40.00</a><br>
-                                <a>Category</a><br>
-                                <a>Author(s)</a><br>
-                                <a>Publisher</a><br>
-                            </div>
-                        </div>
-                        <div class="card-footer bg-transparent" style="background-color: #faf0ea6e">
-                            <div class="text-center">
-                                <a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            @if(\Session::has('cat'))
+{{--                @if('cat' == "" || $cat == null )--}}
+                    <p>$cat</p>
+{{--                <div  class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">--}}
+{{--                    <div class="col mb-5">--}}
 
-            </div>
+{{--                        @foreach($cats as $cat)--}}
+{{--                            <div  class="card h-100">--}}
+{{--                            <img class="card-img-top" src="assets/cover2.jpeg" alt="..." />--}}
+{{--                            <div class="card-body">--}}
+{{--                                        <div class="text-center">--}}
+{{--                                            <h5 class="fw-bolder">$cats.title</h5>--}}
+{{--                                            <a>$cats.title</a><br>--}}
+{{--                                            <a>$cats.selling_price</a><br>--}}
+{{--    --}}{{--                                        <a>Author(s)</a><br>--}}
+{{--                                            <a>$cats.publisher_name</a><br>--}}
+{{--                                        </div>--}}
+{{--                            </div>--}}
+
+{{--                            <div class="card-footer bg-transparent" style="background-color: #faf0ea6e">--}}
+{{--                                <div class="text-center">--}}
+{{--                                    <a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        @endfor--}}
+{{--                </div>--}}
+{{--            </div>--}}
+            @endif
             <div class="form-group" style="margin-bottom: 20px; align-content: center; padding-left: 350px; position: fixed; bottom: 0">
                 <input type="button" style="background-color: #1a1e21; color: white" class="btn btn-block create-account" value="<Previous">
                 <input type="button" style="background-color: #1a1e21; color: white" class="btn btn-block create-account" value="Next>">

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
@@ -76,7 +77,17 @@ class RegisterController extends Controller
             'shipping_address' => $data['shipping_address'],
             'e-mail' => $data['e-mail'],
             'password' => Hash::make($data['password']),
-            'is_manager' => true
+            'is_manager' => false
         ]);
+    }
+
+    protected function authenticated(Request $request, $user)
+    {
+        if ($user->is_manager == 1){
+            return redirect("/adminHome");
+        } else{
+            return redirect($this->redirectTo);
+
+        }
     }
 }

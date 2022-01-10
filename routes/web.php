@@ -16,22 +16,24 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('Home');
 });
-Auth::routes();
-Route::group(['middleware' => 'auth'],function() {
-    Route::get('/adminHome', function () {
-        return view('Admin_home');
-    });
-    Route::get('/home', function () {
-        return view('User_home');
-    });
-    Route::get('/promote', function () {
-        return view('Promote');
-    });
-    Route::get('/settings', function () {
-        return view('Settings');
-    });
-    Route::get('/pay', function () {
-        return view('Payment');
+Route::group(['middleware' => 'prevent'],function() {
+    Auth::routes();
+    Route::group(['middleware' => 'auth'], function () {
+        Route::get('/adminHome', function () {
+            return view('Admin_home');
+        });
+        Route::get('/home', function () {
+            return view('User_home');
+        });
+        Route::get('/promote', function () {
+            return view('Promote');
+        });
+        Route::get('/settings', function () {
+            return view('Settings');
+        });
+        Route::get('/pay', function () {
+            return view('Payment');
+        });
     });
 });
 

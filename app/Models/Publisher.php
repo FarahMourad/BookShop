@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-class Publisher
+class Publisher extends Model
 {
     protected $table = 'publisher';
     public $timestamps = false;

@@ -13,9 +13,8 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
 </head>
+
 <body>
-<div id="light" class="white_content"></div>
-<div id="fade" class="black_overlay"></div>
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container px-4 px-lg-5">
@@ -38,17 +37,15 @@
         </div>
     </div>
 </nav>
-
 <div style="float:right; margin-right: 20px; margin-top: 20px">
     <button class="btn btn-primary" >Promote user</button>
     <button class="btn btn-primary" >+ Add new book</button>
 </div>
-
 <section class="py-5">
     <div class="container px-4 px-lg-5 mt-5">
         <div style="display:inline-block; width: 15%; border-right: 1px solid #8a6e5a; height: 500px">
             <div>
-                <button class="btn btn-primary" >Search</button>
+                <button id="search" class="btn btn-primary" >Search</button>
             </div>
             <ul class="nav flex-column">
                 <li class="nav-item">
@@ -180,11 +177,25 @@
 <!--        </form>-->
 <!--    </div>-->
 <!--</section>-->
-
 <!-- Bootstrap core JS-->
+
+<div id="light" class="white_content"><button>hello</button></div>
+<div id="fade" class="black_overlay"></div>
+
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Core theme JS-->
-<script src="js/scripts.js"></script>
-<script src="js/router.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $('#search').on("click", function () {
+        document.getElementById('light').style.display = "block";
+        document.getElementById('fade').style.display = "block";
+    })
+    $('#fade').on("click", function () {
+        document.getElementById('light').style.display = "none";
+        document.getElementById('fade').style.display = "none";
+    })
+</script>
 </body>
 </html>

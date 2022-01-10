@@ -224,8 +224,7 @@
 </nav>
 <section class="py-5" style="background-image: url(assets/cover.jfif); height: 720px; background-size: cover; background-repeat: no-repeat; background-attachment: fixed">
     <div class="registration-form" style="padding: unset">
-        <form method="POST" action="{{route('getStat')}}">
-            @csrf
+        <form>
             <H5 style="font-family: 'Lucida Bright'">Statistics</H5><br>
             <div class="form-group">
                 <label style="width: 400px; margin-bottom: 5px">

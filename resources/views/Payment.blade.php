@@ -24,15 +24,15 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                 <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
                 <li style="display: none" class="nav-item"><a class="nav-link" href="settings">Profile</a></li>
-                <li style="display: none" class="nav-item"><a class="nav-link" href="statistics">Statistics</a></li>
-                <li class="nav-item"><a class="nav-link" onclick="event.preventDefault();
+                <li style="display: none" class="nav-item"><a class="nav-link" href="stat">Statistics</a></li>
+                <li class="nav-item"><a class="nav-link" style="cursor: pointer" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">Logout</a></li>
             </ul>
             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                 @csrf
             </form>
             <form class="d-flex">
-                <button class="btn btn-outline-dark" type="submit">
+                <button class="btn btn-outline-dark" type="button" onclick="location.href = 'cart';">
                     <i class="bi-cart-fill me-1"></i>
                     Cart
                     <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>

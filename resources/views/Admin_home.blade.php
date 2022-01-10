@@ -129,11 +129,15 @@
 <div id="light" class="white_content">
     <div class="registration-form">
         <form>
-            <button class="btn btn-primary" onclick="location.href = 'promote';">Promote user</button>
-            <button class="btn btn-primary" onclick="location.href = 'addB';">+ Add new book</button>
-            <button class="btn btn-primary" onclick="location.href = 'editB';">Edit book</button>
-            <button class="btn btn-primary" onclick="location.href = 'con';">Confirm Orders</button>
-            <button class="btn btn-primary" onclick="location.href = 'addP';">+ Add Publishers</button>
+            <button class="btn btn-primary" style="width: 160px" onclick="location.href = 'promote';">Promote user</button>
+            <br>
+            <button class="btn btn-primary" style="width: 160px" onclick="location.href = 'addB';">+ Add new book</button>
+            <br>
+            <button class="btn btn-primary" style="width: 160px" onclick="location.href = 'editB';">Edit book</button>
+            <br>
+            <button class="btn btn-primary" style="width: 160px" onclick="location.href = 'con';">Confirm Orders</button>
+            <br>
+            <button class="btn btn-primary" style="width: 160px" onclick="location.href = 'addP';">+ Add Publishers</button>
         </form>
     </div>
 </div>

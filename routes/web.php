@@ -28,9 +28,15 @@ Route::group(['middleware' => 'prevent'],function() {
         Route::get('/promote', function () {
             return view('Promote');
         });
-        Route::get('/settings', function () {
-            return view('Settings');
-        });
+
+        Route::get('/settings', 'EditUserInfoController@showSetting');
+
+        Route::post('/editData', 'EditUserInfoController@edit')->name('edit');
+
+
+//        Route::get('/settings', function () {
+//            return view('Settings');
+//        });
         Route::get('/pay', function () {
             return view('Payment');
         });

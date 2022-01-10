@@ -23,10 +23,10 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                <li class="nav-item"><a class="nav-link" aria-current="page" href="Home.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="./settings.html">Profile</a></li>
-                <li class="nav-item"><a class="nav-link" href="./statistics.html">Statistics</a></li>
-                <li class="nav-item"><a class="nav-link" href="./Home.html">Logout</a></li>
+                <li class="nav-item"><a class="nav-link" aria-current="page" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="settings">Profile</a></li>
+                <li class="nav-item"><a class="nav-link" href="statistics">Statistics</a></li>
+                <li class="nav-item"><a class="nav-link" href="/">Logout</a></li>
             </ul>
             <form class="d-flex">
                 <button class="btn btn-outline-dark" type="submit">

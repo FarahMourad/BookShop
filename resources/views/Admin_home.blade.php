@@ -71,33 +71,31 @@
         </div>
         <div style=" float:right; width: 80%">
             <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                <div class="col mb-5">
-                    <div  class="card h-100">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="assets/cover2.jpeg" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">Book Title</h5>
-                                <!-- Product price-->
-                                <a>$40.00</a><br>
-                                <!-- Product category-->
-                                <a>Category</a><br>
-                                <!-- Product authors-->
-                                <a>Author(s)</a><br>
-                                <!-- Product publisher-->
-                                <a>Publisher</a><br>
+                @if($cats !== "" )
+                    @foreach( $cats as $cat )
+                        <div class="col mb-5">
+                            {{--                        @foreach($cats as $cat)--}}
+                            <div  class="card h-100">
+                                <img class="card-img-top" src="assets/cover2.jpeg" alt="..." />
+                                <div class="card-body">
+                                    <div class="text-center">
+                                        {{--                                                <h5 class="fw-bolder">$cats.title</h5>--}}
+                                        <a>{{$cat->title}}</a><br>
+                                        <a>{{$cat->selling_price}}</a><br>
+                                        <a>Author(s)</a><br>
+                                        <a>{{$cat->publisher_name}}</a><br>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-transparent" style="background-color: #faf0ea6e">
+                                    <div class="text-center">
+                                        <a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a>
+                                    </div>
+                                </div>
                             </div>
+                            {{--                        @endfor--}}
                         </div>
-                        <!-- Product actions-->
-                        <div class="card-footer  bg-transparent" style="background-color: #faf0ea6e">
-                            <div class="text-center">
-                                <a class="btn btn-outline-dark mt-auto dark" style="cursor: pointer">Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    @endforeach
+                @endif
             </div>
             <div class="form-group" style="margin-bottom: 20px; align-content: center; padding-left: 350px; position: fixed; bottom: 0">
                 <input type="button" style="background-color: #1a1e21; color: white" class="btn btn-block create-account" value="<Previous">

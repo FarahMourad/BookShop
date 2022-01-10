@@ -9,7 +9,7 @@ class Book_order extends Model
     public $timestamps = false;
     protected $fillable = [
         'ISBN',
-        'order_id',
+        'id',
         'publisher_name',
         'quantity'
     ];

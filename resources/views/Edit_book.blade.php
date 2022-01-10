@@ -43,37 +43,38 @@
 </nav>
 <section class="py-5" style="background-image: url(assets/cover.jfif); background-position: center; background-size: cover; background-repeat: no-repeat; background-attachment: fixed">
     <div class="registration-form" style="padding: unset">
-        <form>
+        <form method="POST" action="{{route('editBook')}}">
+            @csrf
             <H5>Edit Book</H5>
             <div class="form-group">
-                <label style="width: 120px">ISBN:</label><input type="text" class="form-control item" id="ISBN2" placeholder="Book ISBN to be edited">
+                <label style="width: 120px">ISBN:</label><input name="ISBN" type="text" class="form-control item" id="ISBN2" placeholder="Book ISBN to be edited">
             </div>
             <div class="form-group">
-                <label style="width: 120px">Title:</label><input type="text" class="form-control item" id="title2" placeholder="Title">
+                <label style="width: 120px">Title:</label><input name="title" type="text" class="form-control item" id="title2" placeholder="Title">
             </div>
             <div class="form-group">
-                <label style="width: 120px">Price:</label><input type="text" class="form-control item" id="price2" placeholder="Price">
+                <label style="width: 120px">Price:</label><input name="selling_price" type="text" class="form-control item" id="price2" placeholder="Price">
             </div>
             <div class="form-group">
-                <label style="width: 120px">Publisher:</label><input type="text" class="form-control item" id="publisher2" placeholder="Publisher">
+                <label style="width: 120px">Publisher:</label><input name="publisher_name" type="text" class="form-control item" id="publisher2" placeholder="Publisher">
             </div>
             <div class="form-group">
-                <label style="width: 120px">Publication Year:</label><input type="text" class="form-control item" id="year2" placeholder="Publication Year">
+                <label style="width: 120px">Publication Year:</label><input name="publication_year" type="text" class="form-control item" id="year2" placeholder="Publication Year">
             </div>
             <div class="form-group">
-                <label style="width: 120px">Threshold:</label><input type="text" class="form-control item" id="threshold2" placeholder="Threshold">
+                <label style="width: 120px">Threshold:</label><input type="text" name="threshold" class="form-control item" id="threshold2" placeholder="Threshold">
             </div>
             <div class="form-group">
-                <label style="width: 120px">Quantity:</label><input type="text" class="form-control item" id="copies2" placeholder="Available Copies">
+                <label style="width: 120px">Quantity:</label><input type="text" name="quantity" class="form-control item" id="copies2" placeholder="Available Copies">
             </div>
             <div class="form-group">
-                <label style="width: 120px">Category:</label><input type="text" class="form-control item" id="category2" placeholder="Book Category">
+                <label style="width: 120px">Category:</label><input type="text" name="category" class="form-control item" id="category2" placeholder="Book Category">
             </div>
             <div class="form-group">
-                <label style="width: 120px">Author(s):</label><input type="text" class="form-control item" id="author2" placeholder="Author1,Author2,Author3..">
+                <label style="width: 120px">Author(s):</label><input type="text" name="authors" class="form-control item" id="author2" placeholder="Author1,Author2,Author3..">
             </div>
             <div class="form-group">
-                <button type="button" style="margin-left: 120px" class="btn btn-block create-account">Edit Book</button>
+                <button type="submit" style="margin-left: 120px" class="btn btn-block create-account">Edit Book</button>
             </div>
         </form>
     </div>

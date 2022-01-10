@@ -65,6 +65,7 @@ Route::group(['middleware' => 'prevent'],function() {
         });
 
         Route::post('/addBook', 'BookController@addBook')->name('addBook');
+        Route::post('/editBook', 'BookController@editBook')->name('editBook');
 
 
         Route::get('/addP', function () {

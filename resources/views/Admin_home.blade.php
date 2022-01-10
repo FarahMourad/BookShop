@@ -42,9 +42,7 @@
     </div>
 </nav>
 <div style="float:right; margin-right: 20px; margin-top: 20px">
-    <button  class="btn btn-primary" onclick="location.href = '/promote';">Promote user</button>
-    <button class="btn btn-primary" id="addBook" onclick="location.href = 'addB';">+ Add new book</button>
-    <button class="btn btn-primary" id="editBook" onclick="location.href = 'editB';">Edit book</button>
+    <button  class="btn btn-primary" id="editsShower">Manager Edits</button>
 </div>
 <section class="py-5">
     <div class="container px-4 px-lg-5 mt-5">
@@ -128,6 +126,17 @@
         </form>
     </div>
 </div>
+<div id="light" class="white_content">
+    <div class="registration-form">
+        <form>
+            <button class="btn btn-primary" onclick="location.href = 'promote';">Promote user</button>
+            <button class="btn btn-primary" onclick="location.href = 'addB';">+ Add new book</button>
+            <button class="btn btn-primary" onclick="location.href = 'editB';">Edit book</button>
+            <button class="btn btn-primary" onclick="location.href = 'con';">Confirm Orders</button>
+            <button class="btn btn-primary" onclick="location.href = 'addP';">+ Add Publishers</button>
+        </form>
+    </div>
+</div>
 <div id="fadeS" class="black_overlay"></div>
 
 
@@ -139,10 +148,17 @@
     $('#search').on("click", function () {
         document.getElementById('lightS').style.display = "block";
         document.getElementById('fadeS').style.display = "block";
+        document.getElementById('light').style.display = "none";
     })
     $('#fadeS').on("click", function () {
         document.getElementById('lightS').style.display = "none";
+        document.getElementById('light').style.display = "none";
         document.getElementById('fadeS').style.display = "none";
+    })
+    $('#editsShower').on("click", function () {
+        document.getElementById('light').style.display = "block";
+        document.getElementById('fadeS').style.display = "block";
+        document.getElementById('lightS').style.display = "none";
     })
 </script>
 </body>

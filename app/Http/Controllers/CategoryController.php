@@ -38,7 +38,7 @@ class CategoryController
         $cat = Book::where('category', "religion")->get();
         return view('Admin_home', ['cats' => $cat]);
     }
-    
+
 
     public function getArt(){
         $cat = "art";

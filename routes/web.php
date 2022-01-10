@@ -28,6 +28,12 @@ Route::group(['middleware' => 'prevent'],function() {
         Route::get('/home', 'CategoryController@getAll');
         Route::get('/adminHome', 'CategoryController@getAllAdimin');
 
+        Route::get('/getArtAdmin', 'CategoryController@getArtAdmin')->name('getArtAdmin');
+        Route::get('/getGeoAdmin', 'CategoryController@getGeoAdmin')->name('getGeoAdmin');
+        Route::get('/getRelAdmin', 'CategoryController@getRelAdmin')->name('getRelAdmin');
+        Route::get('/getScienceAdmin', 'CategoryController@getScienceAdmin')->name('getScienceAdmin');
+        Route::get('/getHistAdmin', 'CategoryController@getHistoryAdmin')->name('getHistAdmin');
+
 
         Route::get('/promote', function () {
             return view('Promote');

@@ -52,19 +52,19 @@
             </div>
             <ul class="nav flex-column">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Art</a>
+                    <a class="nav-link active" href="/getArtAdmin">Art</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Geography</a>
+                    <a class="nav-link" href="/getGeoAdmin">Geography</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">History</a>
+                    <a class="nav-link" href="/getHistAdmin">History</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Religion</a>
+                    <a class="nav-link" href="/getRelAdmin">Religion</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Science</a>
+                    <a class="nav-link" href="/getScienceAdmin">Science</a>
                 </li>
             </ul>
 

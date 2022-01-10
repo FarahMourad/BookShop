@@ -3,39 +3,42 @@
 namespace App\Http\Controllers;
 
 use App\Models\Book;
+use App\Models\Publisher;
+use App\Models\Author;
 use Illuminate\Http\Request;
 use \Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Auth;
 
 class BookController
 {
     public function getBooks(Request $request): JsonResponse
     {
-        $books = Book::all()->orderBy('title', 'ASC')->get([
-            'ISBN',
-            'title',
-            'publication_year',
-            'publisher_name',
-            'selling_price',
-            'category',
-            'quantity',
-            'threshold']);
+        $books = Book::all()->orderBy('title', 'ASC')->get();
         return response()->json($books);
     }
 
     public function addBook(Request $request)
     {
+        $publisher_name = $request->publisher_name;
+        $publisher = Publisher::where([
+            ['publisher_name', $publisher_name]
+        ])->first();
+        if ($publisher == null) {
+            return;
+        }
+
         $ISBN = $request->ISBN;
         $title = $request->title;
         $publication_year = $request->publication_year;
-        $publisher_name = $request->publisher_name;
         $selling_price = $request->selling_price;
         $category = $request->category;
         $quantity = $request->quantity;
         $threshold = $request->threshold;
+        $authors = $request->authors;
 
         if (ISBN != null && $title != null && $publication_year != null && $publisher_name != null &&
-            $selling_price != null && $category != null && $quantity != null && $threshold != null) {
+            $selling_price != null && $category != null && $quantity != null && $threshold != null && $authors != null) {
             $book = new Book();
             $book->ISBN = $ISBN;
             $book->title = $title;
@@ -45,25 +48,34 @@ class BookController
             $book->category = $category;
             $book->quantity = $quantity;
             $book->threshold = $threshold;
+            $this->addAuthors($authors, $ISBN);
             $book->save();
         }
-
     }
 
     public function editBook(Request $request)
     {
+        $publisher_name = $request->publisher_name;
+        $publisher = Publisher::where([
+            ['publisher_name', $publisher_name]
+        ])->first();
+        if ($publisher == null) {
+            return;
+        }
         $ISBN = $request->ISBN;
         $title = $request->title;
         $publication_year = $request->publication_year;
-        $publisher_name = $request->publisher_name;
         $selling_price = $request->selling_price;
         $category = $request->category;
         $quantity = $request->quantity;
         $threshold = $request->threshold;
+        $authors = $request->authors;
+        $this->deleteAuthors($ISBN);
+        $this->addAuthors($authors, $ISBN);
 
         $book = Book::where([
             ['ISBN', $ISBN]
-        ]);
+        ])->first();
 
         if ($book != null) {
             $book->title = $title != null ? $title : $book->title;
@@ -77,20 +89,31 @@ class BookController
         }
     }
 
+    public function addAuthors($authors, $ISBN)
+    {
+        $authors_list = explode(',', $authors);
+        for ($i = 0; $i < $authors_list->count($authors); $i++) {
+            $newAuthor = new Author();
+            $newAuthor->ISBN = $ISBN;
+            $newAuthor->author_name = $authors_list[$i];
+            $newAuthor->save();
+        }
+    }
+
+    public function deleteAuthors($ISBN)
+    {
+        $old_authors = Author::where([
+            ['ISBN', $ISBN]
+        ])->get();
+        $old_authors->delete();
+    }
+
     public function searchByISBN(Request $request)
     {
         $ISBN = $request->ISBN;
         $books = Book::where([
             ['ISBN', $ISBN]
-        ])->get([
-            'ISBN',
-            'title',
-            'publication_year',
-            'publisher_name',
-            'selling_price',
-            'category',
-            'quantity',
-            'threshold']);
+        ])->get();
         return response()->json($books);
     }
 
@@ -99,15 +122,7 @@ class BookController
         $title = $request->title;
         $books = Book::where([
             ['title', $title]
-        ])->get([
-            'ISBN',
-            'title',
-            'publication_year',
-            'publisher_name',
-            'selling_price',
-            'category',
-            'quantity',
-            'threshold']);
+        ])->get();
         return response()->json($books);
     }
 
@@ -116,15 +131,7 @@ class BookController
         $publication_year = $request->publication_year;
         $books = Book::where([
             ['publication_year', $publication_year]
-        ])->get([
-            'ISBN',
-            'title',
-            'publication_year',
-            'publisher_name',
-            'selling_price',
-            'category',
-            'quantity',
-            'threshold']);
+        ])->get();
         return response()->json($books);
     }
 
@@ -133,15 +140,7 @@ class BookController
         $publisher_name = $request->publisher_name;
         $books = Book::where([
             ['publisher_name', $publisher_name]
-        ])->get([
-            'ISBN',
-            'title',
-            'publication_year',
-            'publisher_name',
-            'selling_price',
-            'category',
-            'quantity',
-            'threshold']);
+        ])->get();
         return response()->json($books);
     }
 
@@ -150,15 +149,7 @@ class BookController
         $selling_price = $request->selling_price;
         $books = Book::where([
             ['selling_price', $selling_price]
-        ])->get([
-            'ISBN',
-            'title',
-            'publication_year',
-            'publisher_name',
-            'selling_price',
-            'category',
-            'quantity',
-            'threshold']);
+        ])->get();
         return response()->json($books);
     }
 
@@ -167,15 +158,7 @@ class BookController
         $category = $request->category;
         $books = Book::where([
             ['category', $category]
-        ])->get([
-            'ISBN',
-            'title',
-            'publication_year',
-            'publisher_name',
-            'selling_price',
-            'category',
-            'quantity',
-            'threshold']);
+        ])->get();
         return response()->json($books);
     }
 
@@ -184,15 +167,7 @@ class BookController
         $quantity = $request->quantity;
         $books = Book::where([
             ['quantity', $quantity]
-        ])->get([
-            'ISBN',
-            'title',
-            'publication_year',
-            'publisher_name',
-            'selling_price',
-            'category',
-            'quantity',
-            'threshold']);
+        ])->get();
         return response()->json($books);
     }
 
@@ -201,15 +176,7 @@ class BookController
         $threshold = $request->threshold;
         $books = Book::where([
             ['threshold', $threshold]
-        ])->get([
-            'ISBN',
-            'title',
-            'publication_year',
-            'publisher_name',
-            'selling_price',
-            'category',
-            'quantity',
-            'threshold']);
+        ])->get();
         return response()->json($books);
     }
 }

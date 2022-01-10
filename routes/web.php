@@ -29,24 +29,26 @@ Route::group(['middleware' => 'prevent'],function() {
             return view('Promote');
         });
 
+        Route::post('/promoteUser', 'ManagerController@promote_user')->name('promoteUser');
+
         Route::get('/settings', 'EditUserInfoController@showSetting');
 
         Route::post('/editData', 'EditUserInfoController@edit')->name('edit');
 
-
-//        Route::get('/settings', function () {
-//            return view('Settings');
-//        });
         Route::get('/pay', function () {
             return view('Payment');
+        });
+        Route::get('/cart', function () {
+            return view('Cart');
+        });
+        Route::get('/editB', function () {
+            return view('Edit_book');
+        });
+        Route::get('/addB', function () {
+            return view('Add_book');
         });
     });
 });
 
-Route::get('/editB', function () {
-    return view('Edit_book');
-});
-Route::get('/addB', function () {
-    return view('Add_book');
-});
+
 

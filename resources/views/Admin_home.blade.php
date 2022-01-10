@@ -42,7 +42,7 @@
     </div>
 </nav>
 <div style="float:right; margin-right: 20px; margin-top: 20px">
-    <button class="btn btn-primary" >Promote user</button>
+    <button  class="btn btn-primary" onclick="location.href = '/promote';">Promote user</button>
     <button class="btn btn-primary" id="addBook" >+ Add new book</button>
 </div>
 <section class="py-5">

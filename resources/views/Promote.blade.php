@@ -40,12 +40,13 @@
 <!-- Section-->
 <section class="py-5" style="background: url(assets/cover.jfif) no-repeat center center; background-size: cover; height: 665px">
     <div class="registration-form">
-        <form>
+        <form method="POST" action="{{route('promoteUser')}}">
+            @csrf
             <div class="form-group">
-                <input type="text" class="form-control item" id="username" placeholder="E-Mail Address....">
+                <input name="email" type="text" class="form-control item" id="username" placeholder="E-Mail Address....">
             </div>
             <div class="form-group">
-                <button type="button" style="margin-left: 150px" class="btn btn-block create-account">Promote User</button>
+                <button type="submit" style="margin-left: 150px" class="btn btn-block create-account">Promote User</button>
             </div>
         </form>
     </div>

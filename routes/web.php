@@ -26,7 +26,7 @@ Route::group(['middleware' => 'prevent'],function() {
 //            return view('User_home', ['cats' => ""]);
 //        });
         Route::get('/home', 'CategoryController@getAll');
-        Route::get('/adminHome', 'CategoryController@getAllAdimin');
+        //Route::get('/adminHome', 'CategoryController@getAllAdimin');
 
         Route::get('/getArtAdmin', 'CategoryController@getArtAdmin')->name('getArtAdmin');
         Route::get('/getGeoAdmin', 'CategoryController@getGeoAdmin')->name('getGeoAdmin');
@@ -83,9 +83,6 @@ Route::group(['middleware' => 'prevent'],function() {
         Route::post('/addPublisher', 'BookOrderController@addPublisher')->name('addPublisher');
 
     });
-
-
-
 
 });
 

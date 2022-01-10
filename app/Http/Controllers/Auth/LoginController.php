@@ -40,11 +40,7 @@ class LoginController extends Controller
     }
     protected function authenticated(Request $request, $user)
     {
-        if ($user->is_manager == 1){
-            return redirect("/adminHome");
-        } else{
-            return redirect($this->redirectTo);
+        return redirect($this->redirectTo);
 
-        }
     }
 }

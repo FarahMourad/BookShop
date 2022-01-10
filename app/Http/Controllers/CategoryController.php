@@ -10,12 +10,17 @@ class CategoryController
 {
     public function getAll(){
         $cat = Book::all();
-        return view('User_home', ['cats' => $cat]);
+        $user = auth()->user();
+        if($user->is_manager == 1){
+            return view('Admin_home', ['cats' => $cat]);
+        } else
+            return view('User_home', ['cats' => $cat]);
+
     }
-    public function getAllAdimin(){
-        $cat = Book::all();
-        return view('Admin_home', ['cats' => $cat]);
-    }
+//    public function getAllAdimin(){
+//        $cat = Book::all();
+//        return view('Admin_home', ['cats' => $cat]);
+//    }
     public function getArtAdmin(){
         $cat = "art";
         $cat = Book::where('category', "art")->get();

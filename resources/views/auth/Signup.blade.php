@@ -11,7 +11,7 @@
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link th:href="@{/css/styles.css}" rel="stylesheet" />
+    <link href="/css/styles.css" rel="stylesheet" />
 </head>
 <body>
 <!-- Navigation-->
@@ -34,27 +34,31 @@
 <!-- Section-->
 <section class="py-5">
     <div class="registration-form">
-        <form method="post" th:action="@{/process}" th:object="${user}">
+        <form method="POST" action="{{ route('register') }}">
+            @csrf
             <div class="form-group">
-                <input type="text" th:field="*{first_name}" class="form-control item" id="firstname" placeholder="First Name">
+                <input type="text" name="first_name" class="form-control item" id="firstname" placeholder="First Name">
             </div>
             <div class="form-group">
-                <input type="text" th:field="*{last_name}" class="form-control item" id="lastname" placeholder="Last Name">
+                <input type="text" name="last_name" class="form-control item" id="lastname" placeholder="Last Name">
             </div>
             <div class="form-group">
-                <input type="text" th:field="*{user_name}" class="form-control item" id="username" placeholder="Username">
+                <input type="text" name="user_name" class="form-control item" id="username" placeholder="Username">
             </div>
             <div class="form-group">
-                <input type="email" th:field="*{email}" class="form-control item" id="email" placeholder="Email">
+                <input type="email" name="email" class="form-control item" id="email" placeholder="Email">
             </div>
             <div class="form-group">
-                <input type="password" th:field="*{password}" class="form-control item" id="password" placeholder="Password">
+                <input type="password" name="password" class="form-control item" id="password" placeholder="Password">
             </div>
             <div class="form-group">
-                <input type="text" th:field="*{phone_number}" class="form-control item" id="phone-number" placeholder="Phone Number">
+                <input type="password" name="password_confirmation" autocomplete="new-password" class="form-control item" placeholder="Password">
             </div>
             <div class="form-group">
-                <input type="text" th:field="*{shipping_address}" class="form-control item" id="address" placeholder="Shipping Address">
+                <input type="text" name="phone_number" class="form-control item" id="phone-number" placeholder="Phone Number">
+            </div>
+            <div class="form-group">
+                <input type="text" name="shipping_address" class="form-control item" id="address" placeholder="Shipping Address">
             </div>
             <div class="form-group">
                 <button type="submit" style="margin-left: 140px" class="btn btn-block create-account">Create Account</button>

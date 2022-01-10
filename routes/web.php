@@ -19,15 +19,17 @@ Route::get('/', function () {
 Route::get('/adminHome', function () {
     return view('Admin_home');
 });
+
+Auth::routes();
 Route::get('/userHome', function () {
     return view('User_home');
 });
-Route::get('/login', function () {
-    return view('Login');
-});
-Route::get('/signup', function () {
-    return view('Signup');
-});
+//Route::get('/login', function () {
+//    return view('Login');
+//});
+//Route::get('/signup', function () {
+//    return view('Signup');
+//});
 Route::get('/promote', function () {
     return view('Promote');
 });

@@ -28,7 +28,6 @@ Route::group(['middleware' => 'prevent'],function() {
         Route::get('/promote', function () {
             return view('Promote');
         });
-
         Route::post('/promoteUser', 'ManagerController@promote_user')->name('promoteUser');
 
         Route::get('/settings', 'EditUserInfoController@showSetting');
@@ -46,6 +45,9 @@ Route::group(['middleware' => 'prevent'],function() {
         });
         Route::get('/addB', function () {
             return view('Add_book');
+        });
+        Route::get('/stat', function () {
+            return view('Statistics');
         });
     });
 });

@@ -76,7 +76,7 @@ class BookController
         $book = Book::where([
             ['ISBN', $ISBN]
         ])->first();
-
+        redirect()->back();
         if ($book != null) {
             $book->title = $title != null ? $title : $book->title;
             $book->publication_year = $publication_year != null ? $publication_year : $book->publication_year;

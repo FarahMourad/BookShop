@@ -17,16 +17,16 @@
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container px-4 px-lg-5">
-        <a class="navbar-brand" href="./home.html">Book Me</a>
+        <a class="navbar-brand" href="home">Book Me</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                <li class="nav-item"><a class="nav-link" href="./home.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="./login.html">Login</a></li>
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="./signup.html">Signup</a></li>
-                <li style="display: none" class="nav-item"><a class="nav-link" href="./settings.html">Profile</a></li>
-                <li style="display: none" class="nav-item"><a class="nav-link" href="./statistics.html">Statistics</a></li>
-                <li style="display: none" class="nav-item"><a class="nav-link" href="#!">Logout</a></li>
+                <li class="nav-item"><a class="nav-link" href="home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="login">Login</a></li>
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="register">Signup</a></li>
+                <li style="display: none" class="nav-item"><a class="nav-link" href="settings">Profile</a></li>
+                <li style="display: none" class="nav-item"><a class="nav-link" href="statistics">Statistics</a></li>
+                <li style="display: none" class="nav-item"><a class="nav-link" href="logout">Logout</a></li>
             </ul>
         </div>
     </div>

@@ -43,7 +43,8 @@
 </nav>
 <div style="float:right; margin-right: 20px; margin-top: 20px">
     <button  class="btn btn-primary" onclick="location.href = '/promote';">Promote user</button>
-    <button class="btn btn-primary" id="addBook" >+ Add new book</button>
+    <button class="btn btn-primary" id="addBook" onclick="location.href = 'addB';">+ Add new book</button>
+    <button class="btn btn-primary" id="editBook" onclick="location.href = 'editB';">Edit book</button>
 </div>
 <section class="py-5">
     <div class="container px-4 px-lg-5 mt-5">
@@ -95,7 +96,6 @@
                         <div class="card-footer  bg-transparent" style="background-color: #faf0ea6e">
                             <div class="text-center">
                                 <a class="btn btn-outline-dark mt-auto dark" style="cursor: pointer">Add to cart</a>
-                                <a class="btn btn-outline-dark mt-auto dark" style="cursor: pointer" onclick="editB()">Edit</a>
                             </div>
                         </div>
                     </div>
@@ -109,82 +109,6 @@
         </div>
     </div>
 </section>
-<div id="lightEdit" class="white_content">
-    <div class="registration-form">
-        <form>
-            <H5>Edit Book</H5>
-            <div class="form-group">
-                <input type="text" class="form-control item" id="ISBN2" placeholder="Book ISBN">
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control item" id="title2" placeholder="Title">
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control item" id="price2" placeholder="Price">
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control item" id="publisher2" placeholder="Publisher">
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control item" id="year2" placeholder="Publication Year">
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control item" id="threshold2" placeholder="Threshold">
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control item" id="copies2" placeholder="Copies Available">
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control item" id="category2" placeholder="Book Category">
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control item" id="author2" placeholder="Author">
-            </div>
-            <div class="form-group">
-                <button type="button" style="margin-left: 80px" class="btn btn-block create-account">Add Author</button>
-                <button type="button" style="margin-left: 20px" class="btn btn-block create-account">Edit Book</button>
-            </div>
-        </form>
-    </div>
-</div>
-<div id="lightAdd" class="white_content">
-    <div class="registration-form">
-        <form>
-            <H5>Add New Book</H5>
-            <div class="form-group">
-                <input type="text" class="form-control item" id="ISBN" placeholder="Book ISBN">
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control item" id="title" placeholder="Title">
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control item" id="price" placeholder="Price">
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control item" id="publisher" placeholder="Publisher">
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control item" id="year" placeholder="Publication Year">
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control item" id="threshold" placeholder="Threshold">
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control item" id="copies" placeholder="Copies Available">
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control item" id="category" placeholder="Book Category">
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control item" id="author" placeholder="Author">
-            </div>
-            <div class="form-group">
-                <button type="button" style="margin-left: 80px" class="btn btn-block create-account">Add Author</button>
-                <button type="button" style="margin-left: 20px" class="btn btn-block create-account">Add Book</button>
-            </div>
-        </form>
-    </div>
-</div>
 <div id="lightS" class="white_content">
     <div class="registration-form">
         <form>
@@ -216,22 +140,8 @@
         document.getElementById('lightS').style.display = "block";
         document.getElementById('fadeS').style.display = "block";
     })
-
-
-    function editB() {
-        document.getElementById('lightEdit').style.display = "block";
-        document.getElementById('fadeS').style.display = "block";
-    }
-
-
-    $('#addBook').on("click", function () {
-        document.getElementById('lightAdd').style.display = "block";
-        document.getElementById('fadeS').style.display = "block";
-    })
     $('#fadeS').on("click", function () {
         document.getElementById('lightS').style.display = "none";
-        document.getElementById('lightAdd').style.display = "none";
-        document.getElementById('lightEdit').style.display = "none";
         document.getElementById('fadeS').style.display = "none";
     })
 </script>

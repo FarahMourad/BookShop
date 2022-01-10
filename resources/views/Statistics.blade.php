@@ -15,6 +15,11 @@
 </head>
 
 <body>
+
+<div id="light" class="white_content">
+
+</div>
+<div id="fade" class="black_overlay"></div>
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: fixed; right: 0; left: 0">
     <div class="container px-4 px-lg-5">
@@ -41,39 +46,28 @@
         </div>
     </div>
 </nav>
-<section class="py-5" style="background-image: url(assets/cover.jfif); background-position: center; background-size: cover; background-repeat: no-repeat; background-attachment: fixed">
+<section class="py-5" style="background-image: url(assets/cover.jfif); height: 720px; background-size: cover; background-repeat: no-repeat; background-attachment: fixed">
     <div class="registration-form" style="padding: unset">
         <form>
             <H5 style="font-family: 'Lucida Bright'">Statistics</H5><br>
             <div class="form-group">
-                <label style="width: 120px">ISBN:</label><input type="text" class="form-control item" id="ISBN2" placeholder="Book ISBN to be edited">
+                <label style="width: 400px; margin-bottom: 5px">
+                    The total sales for books in the previous month
+                </label>
+                <input type="button" class="form-control item" value="Show" style="background-color: #1a1e21; color: white" onclick="location.href = '';" id="report1">
             </div>
             <div class="form-group">
-                <label style="width: 120px">Title:</label><input type="text" class="form-control item" id="title2" placeholder="Title">
+                <label style="width: 400px; margin-bottom: 5px">
+                    The top 5 customers who purchase the most purchase amount in descending order for the last
+                    three months
+                </label>
+                <input type="button" class="form-control item" value="Show" style="background-color: #1a1e21; color: white" onclick="location.href = '';" id="report2">
             </div>
             <div class="form-group">
-                <label style="width: 120px">Price:</label><input type="text" class="form-control item" id="price2" placeholder="Price">
-            </div>
-            <div class="form-group">
-                <label style="width: 120px">Publisher:</label><input type="text" class="form-control item" id="publisher2" placeholder="Publisher">
-            </div>
-            <div class="form-group">
-                <label style="width: 120px">Publication Year:</label><input type="text" class="form-control item" id="year2" placeholder="Publication Year">
-            </div>
-            <div class="form-group">
-                <label style="width: 120px">Threshold:</label><input type="text" class="form-control item" id="threshold2" placeholder="Threshold">
-            </div>
-            <div class="form-group">
-                <label style="width: 120px">Quantity:</label><input type="text" class="form-control item" id="copies2" placeholder="Available Copies">
-            </div>
-            <div class="form-group">
-                <label style="width: 120px">Category:</label><input type="text" class="form-control item" id="category2" placeholder="Book Category">
-            </div>
-            <div class="form-group">
-                <label style="width: 120px">Author:</label><input type="text" class="form-control item" id="author2" placeholder="Author">
-            </div>
-            <div class="form-group">
-                <button type="button" style="margin-left: 80px" class="btn btn-block create-account">Add Author</button>
+                <label style="width: 400px; margin-bottom: 5px">
+                    The top 10 selling books for the last three months
+                </label>
+                <input type="button" class="form-control item" value="Show" style="background-color: #1a1e21; color: white" onclick="location.href = '';" id="report3">
             </div>
         </form>
     </div>
@@ -85,6 +79,31 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
+    $('#report1').on("click", function () {
+        document.getElementById('light').style.display = "block";
+        document.getElementById('fade').style.display = "block";
+        document.getElementById('table1').style.display = "block";
+        document.getElementById('table2').style.display = "none";
+        document.getElementById('table3').style.display = "none";
+    })
+    $('#report2').on("click", function () {
+        document.getElementById('light').style.display = "block";
+        document.getElementById('fade').style.display = "block";
+        document.getElementById('table2').style.display = "block";
+        document.getElementById('table1').style.display = "none";
+        document.getElementById('table3').style.display = "none";
+    })
+    $('#report3').on("click", function () {
+        document.getElementById('light').style.display = "block";
+        document.getElementById('fade').style.display = "block";
+        document.getElementById('table3').style.display = "block";
+        document.getElementById('table2').style.display = "none";
+        document.getElementById('table1').style.display = "none";
+    })
+    $('#fade').on("click", function () {
+        document.getElementById('light').style.display = "none";
+        document.getElementById('fade').style.display = "none";
+    })
 </script>
 </body>
 </html>

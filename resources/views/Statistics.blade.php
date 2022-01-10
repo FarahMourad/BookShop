@@ -40,7 +40,7 @@
 <section class="py-5" style="background-image: url(assets/cover.jfif); background-position: center; background-size: cover; background-repeat: no-repeat; background-attachment: fixed">
     <div class="registration-form" style="padding: unset">
         <form>
-            <H5>Edit Book</H5>
+            <H5 style="font-family: 'Lucida Bright'">Statistics</H5><br>
             <div class="form-group">
                 <label style="width: 120px">ISBN:</label><input type="text" class="form-control item" id="ISBN2" placeholder="Book ISBN to be edited">
             </div>

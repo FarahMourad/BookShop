@@ -12,15 +12,38 @@ class CategoryController
         $cat = Book::all();
         return view('User_home', ['cats' => $cat]);
     }
+    public function getAllAdimin(){
+        $cat = Book::all();
+        return view('Admin_home', ['cats' => $cat]);
+    }
+    public function getArtAdmin(){
+        $cat = "art";
+        $cat = Book::where('category', "art")->get();
+        return view('Admin_home', ['cats' => $cat]);
+    }
+
+    public function getGeoAdmin(){
+        $cat = Book::where('category', "geography")->get();
+        return view('Admin_home', ['cats' => $cat]);
+    }
+    public function getScienceAdmin(){
+        $cat = Book::where('category', "science")->get();
+        return view('Admin_home', ['cats' => $cat]);
+    }
+    public function getHistoryAdmin(){
+        $cat = Book::where('category', "history")->get();
+        return view('Admin_home', ['cats' => $cat]);
+    }
+    public function getRelAdmin(){
+        $cat = Book::where('category', "religion")->get();
+        return view('Admin_home', ['cats' => $cat]);
+    }
+    
 
     public function getArt(){
         $cat = "art";
         $cat = Book::where('category', "art")->get();
         return view('User_home', ['cats' => $cat]);
-//        return Redirect::back()->withErrors(['cat', $cat]);
-
-//        return redirect()->back()->with([['cat' => $cat]]);
-
     }
     public function getGeo(){
         $cat = Book::where('category', "geography")->get();

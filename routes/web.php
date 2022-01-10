@@ -27,6 +27,7 @@ Route::group(['middleware' => 'prevent'],function() {
 //        });
         Route::get('/home', 'CategoryController@getAll');
         //Route::get('/adminHome', 'CategoryController@getAllAdimin');
+        Route::post('/search', 'BookController@search')->name('search');
 
         Route::get('/getArtAdmin', 'CategoryController@getArtAdmin')->name('getArtAdmin');
         Route::get('/getGeoAdmin', 'CategoryController@getGeoAdmin')->name('getGeoAdmin');

@@ -70,8 +70,6 @@ class BookController
         $quantity = $request->quantity;
         $threshold = $request->threshold;
         $authors = $request->authors;
-        $this->deleteAuthors($ISBN);
-        $this->addAuthors($authors, $ISBN);
 
         $book = Book::where([
             ['ISBN', $ISBN]
@@ -79,6 +77,10 @@ class BookController
         redirect()->back();
         if ($book != null) {
             $book->title = $title != null ? $title : $book->title;
+            if ($authors != null) {
+                $this->deleteAuthors($ISBN);
+                $this->addAuthors($authors, $ISBN);
+            }
             $book->publication_year = $publication_year != null ? $publication_year : $book->publication_year;
             $book->publisher_name = $publisher_name != null ? $publisher_name : $book->publisher_name;
             $book->selling_price = $selling_price != null ? $selling_price : $book->selling_price;

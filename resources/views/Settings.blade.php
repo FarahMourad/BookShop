@@ -45,28 +45,28 @@
             <H5 style="font-family: 'Lucida Bright'">Personal information</H5><br>
             @csrf
             <div class="form-group">
-                <label style="width: 150px">First Name:</label><input name="first_name" type="text" class="form-control item" id="firstname" placeholder="First Name">
+                <label style="width: 200px">First Name:</label><input name="first_name" type="text" class="form-control item" id="firstname" placeholder="{{Auth::user()->first_name}}">
             </div>
             <div class="form-group">
-                <label style="width: 150px">Last Name:</label><input name="last_name" type="text" class="form-control item" id="lastname" placeholder="Last Name">
+                <label style="width: 200px">Last Name:</label><input name="last_name" type="text" class="form-control item" id="lastname" placeholder="{{Auth::user()->last_name}}">
             </div>
             <div class="form-group">
-                <label style="width: 150px">E-Mail:</label><input name="email" type="text" class="form-control item" id="email" placeholder="Email">
+                <label style="width: 200px">E-Mail:</label><input name="email" type="text" class="form-control item" id="email" placeholder="Email">
             </div>
             <div class="form-group">
-                <label style="width: 150px">Old Password:</label><input name="old_password" type="password" class="form-control item" id="oldpassword" placeholder="Old Password">
+                <label style="width: 200px">Old Password:</label><input name="old_password" type="password" class="form-control item" id="oldpassword" placeholder="Old Password">
             </div>
             <div class="form-group">
-                <label style="width: 150px">New Password:</label><input name="new_password" type="password" class="form-control item" id="newpassword" placeholder="New Password">
+                <label style="width: 200px">New Password:</label><input name="new_password" type="password" class="form-control item" id="newpassword" placeholder="New Password">
             </div>
             <div class="form-group">
-                <label style="width: 150px">Confirmation Password:</label><input name="confirm_password" type="password" class="form-control item" id="confirm_password" placeholder="Confirm Password">
+                <label style="width: 200px">Confirmation Password:</label><input name="confirm_password" type="password" class="form-control item" id="confirm_password" placeholder="Confirm Password">
             </div>
             <div class="form-group">
-                <label style="width: 150px">Phone Number:</label><input name="phone_number" type="text" class="form-control item" id="phone-number" placeholder="Phone Number">
+                <label style="width: 200px">Phone Number:</label><input name="phone_number" type="text" class="form-control item" id="phone-number" placeholder="{{Auth::user()->phone_number}}">
             </div>
             <div class="form-group">
-                <label style="width: 150px">Shipping Address:</label><input name="shipping_address" type="text" class="form-control item" id="address" placeholder="Shipping Address">
+                <label style="width: 200px">Shipping Address:</label><input name="shipping_address" type="text" class="form-control item" id="address" placeholder="{{Auth::user()->shipping_address}}">
             </div>
             <div class="form-group">
                 <button type="submit" style="margin-left: 160px; margin-top: 0" class="btn btn-block create-account">Update Profile</button>

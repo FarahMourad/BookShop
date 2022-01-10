@@ -87,6 +87,7 @@ class BookController
             $book->threshold = $threshold != null ? $threshold : $book->threshold;
             $book->save();
         }
+        redirect()->back();
     }
 
     public function addAuthors($authors, $ISBN)

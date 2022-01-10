@@ -20,5 +20,6 @@ class PublisherController
             $publisher->telephone_no = $telephone_no;
             $publisher->save();
         }
+        return redirect()->back();
     }
 }

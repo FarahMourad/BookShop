@@ -70,7 +70,7 @@ Route::group(['middleware' => 'prevent'],function() {
         Route::get('/addP', function () {
             return view('Add_publisher');
         });
-        
+
         Route::get('/stat', function () {
             return view('Statistics');
         });
@@ -78,7 +78,11 @@ Route::group(['middleware' => 'prevent'],function() {
         Route::post('/deleteOrder', 'BookOrderController@confirmOrder')->name('deleteOrder');
 
         Route::get('/con', 'BookOrderController@confirmOrderPage')->name('confirmOrderPage');
+
+        Route::post('/addPublisher', 'BookOrderController@addPublisher')->name('addPublisher');
+
     });
+
 
 
 

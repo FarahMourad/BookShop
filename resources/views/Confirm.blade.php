@@ -27,6 +27,9 @@
                 <li class="nav-item"><a class="nav-link" style="cursor: pointer" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">Logout</a></li>
             </ul>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+            </form>
             <form class="d-flex">
                 <button class="btn btn-outline-dark" type="button">
                     <i class="bi-cart-fill me-1"></i>
@@ -59,6 +62,7 @@
                     @if($cats !== "" )
                         @foreach( $cats as $cat )
                             <form method="POST" action="{{route('deleteOrder')}}" style="display: none" id="{{$cat->order_id}}">
+                                @csrf
                             <input name="order_id" type="text" value="{{$cat->order_id}}">
                             <tr>
                                 <td>{{$cat->order_id}}</td>

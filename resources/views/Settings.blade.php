@@ -15,7 +15,7 @@
 </head>
 <body>
 <!-- Navigation-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: fixed; right: 0; left: 0">
     <div class="container px-4 px-lg-5">
         <a class="navbar-brand" href="/">Book Store</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -35,32 +35,36 @@
     </div>
 </nav>
 <!-- Section-->
-<section class="py-5" style="background: url(assets/cover.jfif) no-repeat center center; background-size: cover; height: 665px">
+<section class="py-5" style="background-image: url(assets/cover.jfif); background-position: center; background-size: cover; background-repeat: no-repeat; background-attachment: fixed">
     <div class="registration-form" style="padding: unset">
-        <form style="margin-top: unset; padding: 30px 50px">
+        <form style="margin-top: unset; padding: 30px 50px" method="POST" action="{{route('edit')}}">
+            @csrf
             <div class="form-group">
-                <input type="text" class="form-control item" id="firstname" placeholder="First Name">
+                <input name="first_name" type="text" class="form-control item" id="firstname" placeholder="First Name">
             </div>
             <div class="form-group">
-                <input type="text" class="form-control item" id="lastname" placeholder="Last Name">
+                <input name="last_name" type="text" class="form-control item" id="lastname" placeholder="Last Name">
             </div>
             <div class="form-group">
-                <input type="text" class="form-control item" id="email" placeholder="Email">
+                <input name="email" type="text" class="form-control item" id="email" placeholder="Email">
             </div>
             <div class="form-group">
-                <input type="password" class="form-control item" id="oldpassword" placeholder="Old Password">
+                <input name="old_password" type="password" class="form-control item" id="oldpassword" placeholder="Old Password">
             </div>
             <div class="form-group">
-                <input type="password" class="form-control item" id="newpassword" placeholder="New Password">
+                <input name="new_password" type="password" class="form-control item" id="newpassword" placeholder="New Password">
             </div>
             <div class="form-group">
-                <input type="text" class="form-control item" id="phone-number" placeholder="Phone Number">
+                <input name="confirm_password" type="password" class="form-control item" id="confirm_password" placeholder="Confirm Password">
             </div>
             <div class="form-group">
-                <input type="text" class="form-control item" id="address" placeholder="Shipping Address">
+                <input name="phone_number" type="text" class="form-control item" id="phone-number" placeholder="Phone Number">
             </div>
             <div class="form-group">
-                <button type="button" style="margin-left: 160px; margin-top: 0" class="btn btn-block create-account">Update Profile</button>
+                <input name="shipping_address" type="text" class="form-control item" id="address" placeholder="Shipping Address">
+            </div>
+            <div class="form-group">
+                <button type="submit" style="margin-left: 160px; margin-top: 0" class="btn btn-block create-account">Update Profile</button>
             </div>
         </form>
     </div>

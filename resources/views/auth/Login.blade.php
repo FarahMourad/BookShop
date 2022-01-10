@@ -15,7 +15,7 @@
 </head>
 <body>
 <!-- Navigation-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: fixed; right: 0; left: 0">
     <div class="container px-4 px-lg-5">
         <a class="navbar-brand" href="/">Book Store</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -29,16 +29,16 @@
     </div>
 </nav>
 <!-- Section-->
-<section class="py-5" style="background: url(assets/cover.jfif) no-repeat center center; background-size: cover; height: 665px">
+<section class="py-5" style="background-image: url(assets/cover.jfif); height: 720px; background-size: cover; background-repeat: no-repeat; background-attachment: fixed">
     <div class="registration-form">
-
         <form method="POST" action="{{ route('login') }}">
+            <h5 style="font-family: 'Lucida Bright'">Log In</h5><br>
             @csrf
             <div class="form-group">
-                <input type="text" name="e-mail" class="form-control item" id="username" placeholder="E-Mail">
+                <label style="width: 120px">E-Mail:</label><input type="text" name="e-mail" class="form-control item" id="username" placeholder="E-Mail">
             </div>
             <div class="form-group">
-                <input type="password" name="password" required autocomplete="current-password" class="form-control item" id="password" placeholder="Password">
+                <label style="width: 120px">Password:</label><input type="password" name="password" required autocomplete="current-password" class="form-control item" id="password" placeholder="Password">
             </div>
             <div class="form-group">
                 <button type="submit" style="margin-left: 180px" class="btn btn-block create-account">Sign in</button>

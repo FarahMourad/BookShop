@@ -43,3 +43,10 @@ Route::group(['middleware' => 'prevent'],function() {
     });
 });
 
+Route::get('/editB', function () {
+    return view('Edit_book');
+});
+Route::get('/addB', function () {
+    return view('Add_book');
+});
+

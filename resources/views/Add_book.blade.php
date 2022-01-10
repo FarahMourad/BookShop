@@ -66,10 +66,9 @@
                 <label style="width: 120px">Category:</label><input type="text" class="form-control item" id="category2" placeholder="Book Category">
             </div>
             <div class="form-group">
-                <label style="width: 120px">Author:</label><input type="text" class="form-control item" id="author2" placeholder="Author">
+                <label style="width: 120px">Author(s):</label><input type="text" class="form-control item" id="author2" placeholder="Author1,Author2,Author3...">
             </div>
             <div class="form-group">
-                <button type="button" style="margin-left: 80px" class="btn btn-block create-account">Add Author</button>
                 <button type="button" style="margin-left: 20px" class="btn btn-block create-account">Add Book</button>
             </div>
         </form>

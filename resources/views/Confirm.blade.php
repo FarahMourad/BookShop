@@ -59,11 +59,11 @@
                     <tbody id="orderTable">
                     @if($cats !== "" )
                         @foreach( $cats as $cat )
-                            <form method="POST" action="{{route('deleteOrder')}}" style="display: none" id="{{$cat->order_id}}">
+                            <form method="POST" action="{{route('deleteOrder')}}" style="display: none" id="{{$cat->id}}">
                                 @csrf
-                            <input name="order_id" type="text" value="{{$cat->order_id}}">
+                            <input name="order_id" type="text" value="{{$cat->id}}">
                             <tr>
-                                <td>{{$cat->order_id}}</td>
+                                <td>{{$cat->id}}</td>
                                 <td>{{$cat->ISBN}}</td>
                                 <td>{{$cat->quantity}}</td>
                                 <td> {{$cat->publisher_name}}</td>

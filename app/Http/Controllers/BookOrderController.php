@@ -25,7 +25,7 @@ class BookOrderController
 
     public function confirmOrder(Request $request)
     {
-        $order = Book_order::where('order_id', $request->order_id)->first();
+        $order = Book_order::where('id', $request->order_id)->first();
         $order->delete();
         $this->confirmOrderPage();
     }

@@ -105,19 +105,20 @@
 
 <div id="lightS" class="white_content">
     <div class="registration-form">
-        <form>
+        <form method="POST" action="{{route('search')}}">
+            @csrf
             <div class="form-group">
-                <input type="text" name="e-mail" class="form-control item" id="username" placeholder="Key Word">
+                <input type="text" name="key" class="form-control item" id="username" placeholder="Key Word">
                 <div>
-                    <input style="float: left" name="searchSelect" type="radio" id="title"> <label style="float: left; margin-left: 10px" for="title">Title</label><br>
-                    <input style="float: left" name="searchSelect" type="radio" id="isbn"> <label style="float: left; margin-left: 10px" for="isbn">ISBN</label><br>
-                    <input style="float: left" name="searchSelect" type="radio" id="publisher"> <label style="float: left; margin-left: 10px" for="publisher">Publisher</label><br>
-                    <input style="float: left" name="searchSelect" type="radio" id="pYear"> <label style="float: left; margin-left: 10px" for="pYear">Publication Year</label><br>
-                    <input style="float: left" name="searchSelect" type="radio" id="author"> <label style="float: left; margin-left: 10px" for="author">Author</label><br>
+                    <input style="float: left" name="searchSelect" type="radio" id="title" value="title"> <label style="float: left; margin-left: 10px" for="title">Title</label><br>
+                    <input style="float: left" name="searchSelect" type="radio" id="isbn" value="isbn"> <label style="float: left; margin-left: 10px" for="isbn">ISBN</label><br>
+                    <input style="float: left" name="searchSelect" type="radio" id="publisher" value="publisher"> <label style="float: left; margin-left: 10px" for="publisher">Publisher</label><br>
+                    <input style="float: left" name="searchSelect" type="radio" id="pYear" value="pYear"> <label style="float: left; margin-left: 10px" for="pYear">Publication Year</label><br>
+                    <input style="float: left" name="searchSelect" type="radio" id="author" value="author"> <label style="float: left; margin-left: 10px" for="author">Author</label><br>
                 </div>
             </div>
             <div class="form-group">
-                <button style="margin-left: 180px" class="btn btn-block create-account">Search</button>
+                <button style="margin-left: 180px" type="submit" class="btn btn-block create-account">Search</button>
             </div>
         </form>
     </div>

@@ -111,9 +111,22 @@ class BookController
         redirect()->back();
     }
 
+    public function search(Request $request){
+        if ($request->searchSelect == "title")
+            $this->searchByTitle($request);
+        else if ($request->searchSelect == "isbn")
+            $this->searchByISBN($request);
+        else if ($request->searchSelect == "publisher")
+            $this->searchByPublisherName($request);
+        else if ($request->searchSelect == "pYear")
+            $this->searchByPublicationYear($request);
+        else if ($request->searchSelect == "author")
+            $this->searchByPublisherName($request);
+    }
+
     public function searchByISBN(Request $request)
     {
-        $ISBN = $request->ISBN;
+        $ISBN = $request->key;
         $books = Book::where([
             ['ISBN', $ISBN]
         ])->get();
@@ -127,7 +140,7 @@ class BookController
 
     public function searchByTitle(Request $request)
     {
-        $title = $request->title;
+        $title = $request->key;
         $books = Book::where([
             ['title', $title]
         ])->get();
@@ -141,7 +154,7 @@ class BookController
 
     public function searchByPublicationYear(Request $request)
     {
-        $publication_year = $request->publication_year;
+        $publication_year = $request->key;
         $books = Book::where([
             ['publication_year', $publication_year]
         ])->get();
@@ -155,7 +168,7 @@ class BookController
 
     public function searchByPublisherName(Request $request)
     {
-        $publisher_name = $request->publisher_name;
+        $publisher_name = $request->key;
         $books = Book::where([
             ['publisher_name', $publisher_name]
         ])->get();
@@ -169,7 +182,7 @@ class BookController
 
     public function searchBySellingPrice(Request $request)
     {
-        $selling_price = $request->selling_price;
+        $selling_price = $request->key;
         $books = Book::where([
             ['selling_price', $selling_price]
         ])->get();
@@ -183,7 +196,7 @@ class BookController
 
     public function searchByCategory(Request $request)
     {
-        $category = $request->category;
+        $category = $request->key;
         $books = Book::where([
             ['category', $category]
         ])->get();
@@ -197,7 +210,7 @@ class BookController
 
     public function searchByQuantity(Request $request)
     {
-        $quantity = $request->quantity;
+        $quantity = $request->key;
         $books = Book::where([
             ['quantity', $quantity]
         ])->get();
@@ -211,7 +224,7 @@ class BookController
 
     public function searchByThreshold(Request $request)
     {
-        $threshold = $request->threshold;
+        $threshold = $request->key;
         $books = Book::where([
             ['threshold', $threshold]
         ])->get();
